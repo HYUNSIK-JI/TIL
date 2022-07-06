@@ -2,7 +2,7 @@
 
 Today I Learned
 <details>
-<summary>2022년 07월 05일</summary>
+<summary>2022년 07월 05일:</summary>
 
 ## 마크다운 문법 -Heading
 
