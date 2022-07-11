@@ -606,3 +606,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 
   </details>
+  <details>
+<summary>😎2022년 07월 11일😎:🖥 코드업 기초 100제 🖥</summary>
+[코드업 기초 100제](https://github.com/HYUNSIK-JI/TIL/blob/master/%EC%BD%94%EB%93%9C%EC%97%85/%EC%BD%94%EB%93%9C%EC%97%85%20%EA%B8%B0%EC%B4%88%20100%EC%A0%9C.py)
+</details>
