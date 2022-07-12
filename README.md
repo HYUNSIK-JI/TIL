@@ -425,3 +425,188 @@ error: failed to push some refs to 'url'
   - 특정 확장자 : **.exe*
   - 예외 처리 : ***!**b.exe*
   </details>
+  
+  <details>
+  <summary>🌤 2022년 07월 07일 🌤 :🌊 Git Flow 🌊</summary>
+  ## 2022년07월07일
+
+
+
+```bash
+$ git log --oneline
+```
+
+> commit 을 몇 개 한지, 간단하게 확인 가능
+
+
+
+```bash
+$ git checkout `해시값`
+```
+
+> 서버 관리 롤백 가능. commit을 했다면 과거 시점으로 돌아가 복구 가능함
+>
+> `& git log` 로 확인 후 원하는 시점 선택
+
+
+
+**📌 주의 : 원격 저장소에서 자체적인 수정 금지!!!**
+
+​	**해결 방법? : 원격 저장소에 있는 파일을 수정하고 싶으면, <u>로컬 저장소에서 파일 수정 -> commit -> (원격저장소로) push</u>**
+
+
+
+**⭐️ Code 클론 시 압축(ZIP)과 https copy의 차이?**
+
+: 압축(ZIP)은 최신 버전의 파일/폴더만 가지고 오는 것, https copy는 git 저장소를 가지고 오는 것
+
+```bash
+$ git clone '복사한 git https 주소' 
+
+# 주소 예시 : https://github.com/HYUNSIK-JI/TIL.git
+```
+
+> https copy로 클론 하는 것이 분산버전관리를 활용하는 방법이다.
+>
+> 압축(ZIP)은 단지 파일만 내려 받고 싶은 경우임.
+
+
+
+**📌 클론 이후 추가 변동 사항이 생겼다면?**
+
+```bash
+$ git pull origin master
+```
+
+> 이 코드로 원격저장소에서 로컬저장소로 받아오자 !
+>
+> 당연하지만, commit 후 push는 불가능하다.
+
+
+
+### Git Flow
+
+Git을 활용하여 협업하는 흐름으로 branch를 활용하는 전략을 의미합니다.
+
+가장 대표적으로 활용되는 전략은 다음과 같습니다.
+
+![Git Flow](220707.assets/Git Flow-16571857113662.PNG)
+
+
+
+|      branch      |                          주요 특징                           |               예시                |
+| :--------------: | :----------------------------------------------------------: | :-------------------------------: |
+|   master(main)   |                   *배포 가능한 상태의 코드                   |    LOL 클라이언트 라이브 버전     |
+|  develop(main)   | *feature branch로 나누어지거나, 발생된 버그 수정 등 개발 진행 *개발 이후 release branch로 갈라짐 |       다음 패치를 위한 개발       |
+| feature branches | 기능별 개발 브랜치 *기능이 반영 되거나 드랍되는 경우 브랜치 삭제 | 개발시 기능별 예) 드래곤 업데이트 |
+| release branches | 개발 완료 이후 QA/Test 등을 통해 얻어진 다음 배포 전 minor bug fix 등 반영 |            9.24a,9.24b            |
+|     hotfixes     | 긴급 하게 반영 해야 하는 bug fix *release branch는 다음 버전을 위한 것이라면,hotfix branch는 현재버전을  위한것 |       긴급 패치를 위한 작업       |
+
+
+
+### Branch basic **commands**
+
+**1.브랜치 생성**
+
+```bash
+(master) $git branch {branch name}
+```
+
+
+
+**2.브랜치 이동**
+
+```bash
+(master) $git checkout {branch name}
+```
+
+**3.브랜치 생성 및 이동**
+
+```bash
+(master) $git checkout -b {branch name}
+```
+
+**4.브랜치 목록**
+
+```bash
+(master) $git branch
+```
+
+**5.브랜치 삭제**
+
+```bash
+(master) $git branch -d {branch name}
+```
+
+
+
+
+
+### Branch merge
+
+*각 branch에서 작업을 한 이후 이력을 합치기 위해서는 일반적으로 merge 명령어를 사용한다.*
+
+*병합을 진행할 때, 만약 서로 다른 이력(commit)에서 동일한 파일을 수정한 경우 충돌이 발생할 수있다*.
+
+*이 경우에는 반드시 직접 수령을 진행 해야 한다.*
+
+*충돌이 발생한 것은 오류가 발생한 것이 아니라 이력이 변경되는 과정에서 반드시 발생할 수있는 것이다.*
+
+### Branch merge -fast-forword ###
+
+**기존 master 브랜치에 변경사항이 없어 단순히 앞으로 이동 **
+
+``` bash
+(master) $ git merge feature -a
+Updating 54b9314..5429f25
+Fast-forward
+```
+
+
+
+1. *feature-a branch로 이동 후 commit*
+2. *master 별도 변경 없음*
+3. *master branch로 병합*
+
+### branch merge -merge commit
+
+**기존 master 브랜치에 변경사항이 있어 병합 커밋 발생**
+
+```bash
+(master) $ git merge feature -a
+Already up to date!
+Merge made by the 'recursive' strategy
+```
+
+
+
+1. *feature-a branch로 이동 후 commit*
+2. *master branch commit*
+3. *master branch로 병합*
+
+
+
+**$ git config --global core.editor "code --wait" 명령문 이후 병합과정 에러**
+
+```bash
+## GitHub HYUNSIK-JI/TIL.git에 보내려고 했어요
+To https://github.com/HYUNSIK-JI/TIL.git
+ ! [rejected]        master -> master (non-fast-forward)
+
+# 실패했음. 에러입니다.
+error: failed to push some refs to 'https://github.com/HYUNSIK-JI/TIL.git'
+
+# 해결방안:새로 추가 된 파일을 commit 해준 뒤 push를 하게되면 병합되어서 원격 저장소에 저장!
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+```
+
+
+  </details>
+  <details>
+<summary>😎2022년 07월 11일😎:🖥 코드업 기초 100제 🖥</summary>
+[코드업 기초 100제](https://github.com/HYUNSIK-JI/TIL/blob/master/%EC%BD%94%EB%93%9C%EC%97%85/%EC%BD%94%EB%93%9C%EC%97%85%20%EA%B8%B0%EC%B4%88%20100%EC%A0%9C.py)
+</details>
