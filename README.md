@@ -808,10 +808,6 @@ print(num, value)    # 양수면 그대로, 음수면 -붙여서
 value = num if num >= 0 else -num
 ```
 
-![py_ctrl](python_ctrl_state.assets/py_ctrl.png)
-
-
-
 ---
 
 
