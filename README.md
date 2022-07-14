@@ -1,6 +1,7 @@
 # 👻Today I Learend
 Today I Learned
 <details>
+<details>
 <summary>😲2022년 07월 05일😲:🖥 문법 배웠어용 🖥</summary>
 
 ## 마크다운 문법 -Heading
@@ -610,3 +611,870 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 <summary>😎2022년 07월 11일😎:🖥 코드업 기초 100제 🖥</summary>
 [코드업 기초 100제](https://github.com/HYUNSIK-JI/TIL/blob/master/%EC%BD%94%EB%93%9C%EC%97%85/%EC%BD%94%EB%93%9C%EC%97%85%20%EA%B8%B0%EC%B4%88%20100%EC%A0%9C.py)
 </details>
+  <details>
+  <summary>😎2022년 07월 12일😎:🖥 파이썬 기초 문법🖥</summary>
+  ## 2022년07월12일
+
+
+
+````bash
+# ✅제어문(조건문/반복문)
+
+>
+> 1. 제어문이란?
+> 2. 조건문
+> 3. 반복문
+
+## 1. 제어문(Control Statement)
+
+제어문이란?
+
+파이썬은 기본적으로 위에서부터 아래로 순차적으로 명령을 수행
+
+특정 상황에 따라 코드를 선택적으로 실행(분기/조건)하거나 계속하여
+
+실행(반복하는 제어가 필요함)
+
+제어문은 순서도(flow chart)로 표현이 가능
+
+조건문, 반복문
+
+
+
+---
+
+
+
+## 2. 조건문
+
+조건문은 참/거짓을 판단할 수 있는 조건식과 함께 사용
+
+코드 블록을 실행한 다음, 다음 코드를 실행하는 형식
+
+조건문의 기본 형식
+
+```python
+if < expression >;
+    # Run this Code block    <- 참일때 실행
+else:
+    # Run this Code block    <- 거짓일때 실행(선택적, 직접조건X)
+
++++++++++++++++++++++++++++++++
+
+<예제1>
+아래의 순서도를 코드로 나타내세요(pdf 참조)
+◇ 부분: 참, 거짓을 확인하는 조건
+a = -10
+if a >= 0:
+    print('양수')   # -10 은 음수이므로 여기는 실행되지 않음
+else: 
+    print('음수')   # -10 은 음수이므로 여기가 실행됨
+print(a)           # 출력되는 결과는 '음수' -10
+여기서 Terminal에 $ python 파일명.py 입력해서 결과 얻기
+
++++++++++++++++++++++++++++++++
+
+<예제2(실습 문제)>
+예제1에서 a가 홀수인지 확인하고 싶다면?
+[조건문을 통해 변수 num 값의 홀수/짝수 여부를 출력하시오
+ *이때 num 은 input을 통해 사용자로부터 입력 받으시오]
+◇ 부분: 2를 나눈 나머지가 1인지?
+num = input()
+print(num)              #input을 제대로 받고 있는지 반드시 확인!
+print(num, type(num))   #num의 타입이 문자열인지, 숫자인지 확인
+이때 <class 'str'> 즉, 문자열이라는 결과가 출력되기에
+숫자(정수) 결과를 얻기 위해 아래와 같이 코드를 수정해야 함(형 변환)
+num = int(input())
+
+if num % 2 == 1:
+    print('홀수')
+else:
+    print('짝수')
+여기서 Terminal에 $ python 파일명.py 입력해서 정상 실행되는지 확인
+```
+
+
+
+복수조건문
+
+홀수, 짝수가 아니라 여러 구간으로 나누어서 결과를 확인하고 싶을 때
+
+ex) 90점~100점: A, 80점~89점: B, 70점~79점:C ... 를 출력하고 싶을 때!
+
+복수의 조건식을 활용할 경우 **elif**를 활용하여 표현함
+
+```python
+if <expression>:
+    # Code block
+elif <expression>:
+    # Code block
+elif <expression>:
+    # Code block
+else:
+    # Code block
+    
++++++++++++++++++++++++++++++++
+
+<실습문제>
+다음 미세먼지 농도에 따른 등급일 때,
+dust 값에 따라 등급을 출력하는 조건식을 작성하시오.
+dust = 100
+# dust 가 150보다 크면, 매우 나쁨
+if dust > 150:
+    print('매우 나쁨')
+#          80보다 크면, 나쁨
+elif dust > 80:
+    print('나쁨')
+#          30보다 크면, 보통
+elif dust > 30:
+    print('보통')
+# 좋음
+else:
+    print('좋음')
+여기서 Terminal에 $ python 파일명.py 입력해서 결과 얻기
+
+※ 위에서 주의해야 하는 실수! ※
+ elif 쓰다보니 else 에도 조건을 추가해버림
+ 그러나 else 는 위의 조건을 제외한 나머지 전부기 때문에
+ 절대로 추가적인 조건문 쓰면 안됨!
+ 심지어 else 는 상황에 따라 생략해도 결과가 출력됨
+```
+
+
+
+중첩조건문
+
+조건문을 다른 조건문에 중첩되어 사용할 수 있음
+
+```python
+if <expression>:
+        # Code block
+    if <expression>:
+        # Code block
+else:
+        # Code block
+
++++++++++++++++++++++++++++++++
+        
+<실습문제>
+(pdf 참조)
+dust = -10
+
+if dust > 150:
+    print('매우 나쁨')
+elif dust > 80:
+    print('나쁨')
+elif dust > 30:
+    print('보통')
+else:
+    if dust < 0:
+        print('음수 값입니다.')
+    else: 
+    print('좋음')
+여기서 Terminal에 $ python 파일명.py 입력해서 결과 얻기
+```
+
+
+
+조건 표현식(이런게 있다! 정도로만 이해하자)
+
+조건문을 다른 형식으로 쓸 수 있는 방법
+
+조건 표현식을 일반적으로 조건에 따라 값을 정할 때 활용
+
+프린트할 땐 안쓰고, 상황에 따라 
+
+```python
+<실습문제>
+value = num if num >= 0 else -m
+
+num이 정수일 때,
+위 코드는 어떤 코드일까요?
+답: 절댓값을 만드는 코드
+    
+value = num  # 참일 경우
+if num >= 0
+else -m      # 거짓일 경우
+
+위 코드가 if문이었다면?
+num = -10
+if num >= 0:
+    value = num
+else:
+    value = -num
+print(num, value)    # 양수면 그대로, 음수면 -붙여서
+
+# 조건 표현식 코드: 위의 코드를 아래와 같이 변형
+# 원리는 하단 이미지 파일 참조
+value = num if num >= 0 else -num
+```
+
+---
+
+
+
+## 3, 반복문
+
+while, for
+
+
+
+반복문
+
+특정 조건에 도달할 때까지 반복되는 일련의 문장
+
+① while 문: 종료조건에 해당하는 코드를 통해 반복문을 종료시켜야 함
+
+② for 문: 반복가능한 객체를 모두 순회하면 종료(별도의 종료조건의 필요없음)
+
+④ 반복제어: break, continue, for-else
+
+
+
+while 
+
+while문은 조건식이 참인 경우 반복적으로(=무한) 코드를 실행
+
+조건이 참인 경우 들여쓰기 되어 있는 코드 블록이 실행됨
+
+코드 블록이 모두 실행되고, 다시 조건식을 검사하며 반복적으로 실행됨
+
+while 문은 무한 루프를 하지 않도록 종료조건이 반드시 필요
+
+```python
+while <expression>:
+    # Code block
+    
++++++++++++++++++++++++++++++++
+    
+<예제>
+아래의 순서도를 코드로 나타내세요(pdf 참조)
+# Q: 하단의 코드는 몇 번 반복될까? / A: 5회
+a = 0
+while a < 5:    # 종료조건에 해당하는 부분
+    print(a)
+    a += 1      # a = a+1 의미
+print('끝')
+
++++++++++++++++++++++++++++++++
+
+<실습문제>
+1부터 사용자가 입력한 양의 정수까지 총합을 구하는 코드를 작성하시오
+
+# <풀이 절차>
+# 매 회 n 이 1씩 증가해야하고
+# 매 회 result 에는 n을 더해야함
+# 종료는 n = user_input 보다 커졌을 때
+# (True일땐 작거나 같을 때)
+
+n = 0                       # 처음 시작 값
+result = 0                  # 0부터 더하기 위해서
+user_input = int(input())   # user_input 값
+while n <= user_input:
+    result += n
+    n += 1
+print(result)
+여기서 Terminal에 $ python 파일명.py 입력해서 정상 실행되는지 확인
+
++++++++++++++++++++++++++++++++
+
+# 실습문제 Q: 그냥 n<user_input 하면 안되나요?
+# 실습문제 A: (하단의 상황1, 상황2 비교해보기)
+
+# 새로운 상황! n < user_input 를 아래와 같은 코드로 작성
+n = 0
+result = 0
+user_input = int(input())
+while n < user_input:
+    n += 1
+    result += n
+print(result)
+여기서 Terminal에 $ python 파일명.py 입력해서 정상 실행되는지 확인
+처음의 실습문제 풀이와 동일한 값이 출력되는지 확인!
+
+# [상황1,2 비교] 위 상황들이 실제로 어떻게 진행되는 것인지 디버깅 해보기
+
+상황1)
+while n <= user_input:
+    print(f'n: {n}, result: {result}')   # 이 코드를 추가
+    result += n
+    n += 1
+print(result)
+
+상황2)
+while n < user_input:
+    print(f'n: {n}, result: {result}')   # 이 코드를 추가
+    n += 1
+    result += n
+print(result)
+
+# [상황1,2 비교] <- 위의 코드들 사이에 print 추가해서
+# 내가 보기 편하게끔 바꿔나가야 함(아래 코드를 순차적으로 확인)
+n = 0
+result = 0
+user_input = int(input())
+while n <= user_input:
+    print(f'n: {n}, result: {result}')  # 작업상황 확인용 추가코드
+    result += n
+    n += 1
+print(result)
+
+n = 0
+result = 0
+print('=============')       # 요런 줄을 추가해서 상환1,2 사이 코드 가독성 높임
+while n < user_input:
+    print(f'n: {n}, result: {result}') # 작업상황 확인용 추가코드
+    n += 1
+    result += n
+print(result)
+```
+
+
+
+for
+
+for문은 시퀀스(스트링, 튜플, 리스트 ..)를 포함한 순회가능한 객체(iterable)요소를 모두 순회함
+
+처음부터 끝까지 모두 순회하므로 별도의 종료조건이 필요하지 않음
+
+```python
+for <변수명> in <반복 가능한 아이(iterable)>:
+    # Code block
+
++++++++++++++++++++++++++++++++
+    
+<예제>
+아래의 순서도를 코드로 나타내세요(pdf 참조)
+for fruit in ['apple', 'mango', 'banana']:
+    print(fruit)
+print('끝')
+```
+
+
+
+문자열 순회(1)
+
+사용자가 입력한 문자를 한 글자씩 세로로 출력하시오
+
+```python
+chars = input()
+# hi 출력
+
+for char in chars:
+    print(char)
+# h
+# i 출력
+```
+
+
+
+문자열 순회(2)
+
+사용자가 입력한 문자를 **range** 를 활용하여 한 글자씩 세로로 출력하시오
+
+위(1)와 동일하지만, index 를 기준으로 순회한다는 특징/장점이 있음
+
+(= 인덱스로 접근해서 씀, 실제 알고리즘 활용할 땐 이 방법을 더 많이 사용)
+
+```python
+chars = input()
+# hi 출력
+
+# range(len(chars)) 활용!
+for idx in range(len(chars)):
+    print(chars[idx])
+```
+
+
+
+enumerate 순회(심화)
+
+튜플을 활용
+
+알고리즘 때 잘 안쓰고, (2) 위주로 많이 사용하게 됨
+
+
+
+딕셔너리 순회
+
+딕셔너리는 기본적으로 key를 순회하며, key를 통해 값을 활용
+
+```python
+grade = {'john': 80, 'eric': 90}
+for name in grade:
+    print(name)
+    
+# john
+# eric      이와 같이 키만 출력됨
+
++++++++++++++++++++++++++++++++
+
+# 위의 상황에서 값과 같이 출력하고 싶다면?
+
+grade = {'john': 80, 'eric': 90}
+for name in grade:
+    print(name, grades[name])
+
+# john 80
+# eric 90    이와 같이 키-값이 같이 출력됨
+```
+
+
+
+반복문 제어
+
+반복문을 어떻게 멈출 수 있을까?
+
+break: 반복문을 종료
+
+continue: continue 이후의 코드 블록은 수행하지 않고, 다음 반복을 수행
+
+for-else: 끝까지 반복문을 실행한 이후 else문 실행
+
+​                break 통해 중간에 종료되는 경우 else문은 실행되지 않음
+
+
+
+break 예시로 이해하기
+
+```python
+break문을 만나면 반복문은 종료됨
+
+상황1)
+  n = 0
+  while True:
+      if n == 3:
+            break
+      print(n)
+      n += 1
+# 0
+# 1
+# 2 출력
+        
+상황2)
+  for i in range(10):
+        if i > 1:
+            print('0과 1만 필요해!')
+            break
+        print(i)
+# 0
+# 1
+# 0과 1만 필요해!     출력
+```
+
+
+
+continue 예시로 이해하기
+
+```python
+continue 이후의 코드 블록은 수행하지 않고, 다음 반복을 수행
+
+for i in range(6):
+    if i % 2 == 0
+        continue
+    print(i)
+# 1
+# 3
+# 5  출력
+```
+
+
+
+for-else 예시로 이해하기
+
+```python
+상황1)
+  for char in 'apple':
+      if char == 'b':
+          print('b!')
+          break
+  else:
+      print('b가 없습니다.')
+# b가 없습니다.  출력
+    
+상황2)
+  for char in 'banana'
+      if char == 'b'
+          print('b!')
+          break
+  else:
+      print('b가 없습니다.')
+# b!  출력
+```
+
+
+````
+  </details>
+  <details>
+  <summary>😅2022년 07월 13일😅:🎄 세그먼트 트리 와 파이썬 함수 🎄</summary>
+  [세그먼트 트리](https://www.acmicpc.net/problem/10868)
+  이 문제는 세그먼트 트리를 사용하여 풀어야한다. 그런데 처음에 세그먼트 트리에 대하여 잘 몰라서 검색을 통해 세그 먼트 트리를 먼저 공부하였다.
+
+```markdown
+# 세그먼트 트리란?
+세그먼트 트리란 이진 탐색과 비슷하게 구간을 반으로 쪼개어가면서 그 구간에서의 특정 값을 저장해놓은 자료구조이다.
+```
+
+위의 최솟값을 구하는 문제를 풀때 구간이 정해지고 그때마다 구간을 모두 검색해서 최솟값을 찾을수도 있다. 이러면 최솟값을 찾는데 O(n)이고 총 m번의 입력에 따른 최솟값을 구해줘야하니 O(n*m) 즉,시간복잡도를 O(n^2)이라고 볼수 있다. 그러나 세그먼트 트리를 사용한다면 최솟값을 구하는데 O(logN)의
+
+시간복잡도로 시간복잡도를 O(NlogN)으로 준다. 이 방법은 시간복잡도는 줄지만 공간복잡도 는 위의 방법보다는 크다는 특징이 있다.
+
+
+
+## 문제 해결 방법
+
+1. 주어지는 배열에 대하여 세그먼트 트리를 만들어주고 여기서 세그먼트 트리의 각각의 값에 그 구간의 최솟값을 저장
+2. 이렇게 트리를 다 만들어 놓고나서 a,b를 입력받으면 트리를 탐색하면서 a~b구간의 최솟값을 구해준다.
+![세그먼트트리](https://user-images.githubusercontent.com/59475851/178625602-a3f29641-2364-45e3-a26f-5e2c21d1f848.PNG)
+
+트리의 높이:2^ceil(log(n,2))
+
+![세그먼트트리2](https://user-images.githubusercontent.com/59475851/178625630-5e34d557-aff5-4c35-9a61-473a24c3846a.PNG)
+
+노드 개수:2*(2^ceil(log(n,2)))
+
+
+
+```python
+# 10868번 최솟값
+
+import sys
+from math import ceil,log
+
+input=sys.stdin.readline
+
+def mininum(left,right,start,end,node):
+    if left>end or right<start: return 1000000000
+    if left<=start and right>=end: return graph[node]
+    mid=(start+end)//2
+    return min(mininum(left,right,start,mid,node*2),mininum(left,right,mid+1,end,node*2+1))
+# 세그먼트 트리 초기화
+def init(size):
+    for i in range(size-1,0,-1):
+        graph[i]=min(graph[i*2],graph[2*i+1])
+
+n,m=map(int,input().split())
+
+#세그먼트 트리 사이즈 계산
+size=2**ceil(log(n,2)) #세그먼트 높이 계산
+size_max=2*size#세그먼트 트리 노드의 갯수
+
+graph=[1000000000]*size_max#최솟값 초기화
+for i in range(n):
+    graph[size+i]=int(input())
+init(size)
+
+for _ in range(m):
+    s,e=map(int,input().split())
+    #주어지는 s,e는 index가 아니라 번째 수임을 주의해야한다.
+    print(mininum(s-1,e-1,0,size-1,1))
+```
+ ## 📦 함수(function)
+
+* 특정한 기능을 하는 코드의 조각
+
+* 특정 명령을 수행하는 코드를 매번 다시 작성하지 않고, 필요 시에만 호출하여 간편히 사용
+
+  <br>
+
+## 🤔 왜 우리는 함수를 사용할까?
+
+* Decomposition : 기능을 분해해서 재사용 가능
+
+  ``` python
+  # 코드
+  numbers = [1, 10, 100]
+  result = 0
+  cnt = 0
+  for number in numbers:
+    result += number # 합을 구하는 기능
+    cnt += 1 # 카운트 기능
+  print(result/cnt)
+  
+  # 함수
+  print(sum(numbers)/len(numbers)) # 함수로 분리해서 활용, 그 결과 편해지고 간결해짐
+  ```
+
+* Abstraction : 복잡한 내용을 숨기고, 기능에 집중하여 사용할 수 있음.(블랙박스) 재사용성, 가독성, 생산성
+
+  ``` python
+  print('happy!')
+  # 우리가 출력을 함수 없이 구현하려면 얼마나 복잡할까?
+  ```
+
+<br>
+
+## 함수의 정의
+
+* 특정한 기능을 하는 코드의 조각
+
+* 특정 명령을 수행하는 코드를 매번 다시 작성하지 않고, 필요 시에만 호출하여 간편히 사용
+
+* 사용자 함수(Custom Function)
+
+  * 구현되어 있는 함수가 없는 경우, 사용자가 직접 함수를 작성 가능하다.
+
+    ``` python
+    def add(a, b): # a, b를 더하는 함수를 선언
+      return a+b
+    
+    add(5, 10) # 사용
+    ```
+
+<br>
+
+#### 📌 함수의 기본 구조
+
+* 선언과 호출(define & call)
+* 입력(Input)
+* 범위(Scope)
+* 결과값(Output)
+
+<br>
+
+#### 📌 선언과 호출(define & call)
+
+* 선언은 def 키워드를 활용한다.
+* 들여쓰기를 통해 Function body(실행될 코드 블록)를 작성
+* 함수는 파라미터를 넘겨줄 수 있음
+* 함수는 동작 후에 return을 통해 결과값을 전달함
+
+``` python
+def foo(): # 함수의 선언
+  return True
+foo() # 함수의 호출
+
+def add(x,y):
+  return x + y
+add(2,3) # 5
+```
+
+<br>
+
+#### 📌 예시
+
+``` python
+num1 = 0
+num2 = 1
+
+def func1(a, b): # 3. 0 + 5 = 5
+  return a + b
+
+def func2(a, b): # 4. 5 - 1 = 4
+  return a - b
+
+def func3(a, b): # 2. 호출되는 함수 확인
+  return func1(a, 5) + func2(5, b) # 5. 5 + 4 = 9
+
+result = func3(num1, num2) # 1. 호출
+print(result) # 6. 9
+```
+
+<br>
+
+#### 📌 함수의 결과값(output)
+
+#### return
+
+* 함수는 반드시 값을 하나만 return한다.
+  * 명시적 return이 없는 경우에도 None을 반환한다.
+* 함수는 return과 동시에 실행이 종료된다.
+
+``` python
+def minus_and_product(x,y):
+  return x - y
+	return x * y
+# x - y 만 실행이 되고 함수는 종료된다.
+
+def minus_and_product(x,y):
+  return x - y, x * y
+
+minus_and_product(4, 5)
+# -> (-1, 20) 튜플 반환이 됨
+```
+
+<br>
+
+#### 📌 함수의 입력(Input)
+
+* Parameter : 함수를 실행할 때, 함수 내부에서 사용되는 식별자
+* Argument : 함수를 호출 할 때, 넣어주는 값
+  * 필수 Argument : 반드시 전달되어야 하는 argument
+  * 선택 Argument : 값을 전달하지 않아도 되는 경우는 기본 값이 전달
+
+``` python
+def function(ham): # parameter : ham
+  return ham
+
+function('spam') # argument : spam
+```
+
+<br>
+
+#### 📌 Argument
+
+* positional arguments
+
+  * 기본적으로 함수 호출 시 Argument는 위치에 따라 함수 내에 전달됨
+
+    ``` python
+    def add(x, y):
+      return x + y
+    
+    add(2, 3)# 2의 위치 x, 3의 위치 y
+    ```
+
+* keyword arguments
+
+  * 직접 변수의 이름으로 특정 Argument를 전달할 수 있음
+
+  * Keyword Argument 다음에 Positional Argument를 활용할 수 없음
+
+    ``` python
+    def add(x, y):
+      return x + y
+    
+    add(x=2, y=5)
+    add(2, y=5)
+    ```
+
+* default arguments values
+
+  * 기본값을 지정하여 함수 호출 시 argument 값을 설정하지 않도록 함
+
+  * 정의된 것 보다 더 적은 개수의 argument들로 호출될 수 있음
+
+    ``` python
+    def add(x, y=0):
+      return x + y
+    
+    add(2)
+    ```
+
+* 정해지지 않은 개수의 arguments
+
+  * 여러개의 Positional Argument를 하나의 필수 parameter로 받아서 사용
+
+  * 몇 개의 Positional Argument를 받을지 모르는 함수를 정의할 때 유용
+
+    ``` python
+    def add(*args):
+      for args in args:
+        print(arg)
+        
+    add(2)
+    add(2, 3, 4, 5) # 이 경우 타입이 tuple로 나옴
+    ```
+
+* 정해지지 않은 개수의 keyword arguments
+
+  * 함수가 임의의 개수 Argument를 Keyword Argument로 호출될 수 있도록 지정
+
+  * Argument들은 딕셔너리로 묶여 처리되며, parameter에 **를 붙여 표현한다.
+
+    ``` python
+    def family(**kwargs):
+      for key, value in kwargs:
+        print(key, ":", value)
+        
+    family(father='John', mother='Jane', me='Jone Jr.')
+    ```
+
+<br>
+
+#### 📌 함수의 범위(scope)
+
+* 함수는 코드 내부에 local scope를 생성하며, 그 외의 공간인 global scope로 구분한다.
+
+* scope
+
+  * global scope : 코드 어디에서든 참조할 수 있는 공간
+  * local scope : 함수가 만든 scope. 함수 내부에서만 참조 가능
+
+* variable
+
+  * global variable : global scope 내부에 정의된 변수
+
+  * local variable : local scope 내부에 정의된 변수
+
+    ``` python
+    def func(): 
+      a = 20
+      print('local', a)# local scope
+      
+    func() 
+    print('global', a) # global scope
+    # NameError : name 'a' is not defined
+    ```
+
+<br>
+
+#### 📌 객체 수명주기
+
+* 객체는 각자의 수명주기가 존재
+  * built-in scope `(print, sum, len..)`
+    * 파이썬이 실행된 이후부터 영원히 유지됨
+  * global scope `a=3`
+    * 모듈이 호출된 시점 이후 혹은 인터프리터가 끝날 때까지 유지
+  * local scope `def ___ a = 1..`
+    * 함수가 호출될 때 생성되고, 함수가 종료될 때 까지 유지
+
+<br>
+
+#### 📌 이름 검색 규칙(Name Resolution)
+
+* 파이썬에서 사용되는 이름(식별자)들은 이름공간(namespace)에 저장되어 있음
+
+* 아래와 같은 순서로 이름을 찾아나가며, LEGB Rule이라고 부름
+
+  * Local scope : 함수
+  * Enclosed scope : 특정 함수의 상위 함수
+  * Global scope : 함수 밖의 변수, Import 모듈
+  * Built-in scope : 파이썬 안에 내장되어 있는 함수 또는 속성
+
+* 즉, 함수 내에서는 바깥 Scope의 변수에 접근 가능하나 수정 할 수 없음
+
+  ``` python
+  print(sum)
+  print(sum(range(2)))
+  sum = 5
+  print(sum)
+  print(sum(range(2)))
+  # TypeError TraceBack(most recent call last)
+  # 3 sum = 5
+  # 4 print(sum)---->
+  # 5 print(sum(range(2)))
+  # TypeError: 'int' object is not callable
+  ```
+
+<br>
+
+## 함수의 응용
+
+#### 📌 map
+
+* 순회 가능한 데이터구조(iterable)의 모든 요소에 함수 적용하고, 그 결과를 map object로 반환
+
+  ``` python
+  numbers = ['1', '2', '3']
+  new_numbers_2 = map(int, numbers)
+  print(list(new_numbers))#[1, 2, 3]
+  
+  n, m = map(int, input().split())
+  # int
+  # input() = 타입 : String(문자열)
+  # split() = 타입 : list(리스트)
+  # input().split = 타입 : list
+  # map = 어떤 함수를 반복가능한 것들의 요소에 모두 적용
+  # int 함수를 input().split() 리스트의 모든 요소에 적용한 결과 => map object n, m = [10, 20]
+  
+  def plus10(n):
+    return n + 10
+  
+  numbers = [10, 20, 30]
+  new_numbers = list(map(plus10, numbers))
+  print(new_numbers)
+  #[20, 30, 40]
+  ```
+
+  </details>
