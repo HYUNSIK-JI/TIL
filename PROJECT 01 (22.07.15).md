@@ -58,7 +58,7 @@ from pprint import pprint
 
 def movie_info(movie):
     # 0. 해당되는 key를 list에 담기
-    key_list={'id','title','vote_average','overview','gener_ids'}
+    key_list=['id','title','vote_average','overview','gener_ids']
 
     # 1. 새로운 dictionary를 담을 변수 선언
     movies={}
