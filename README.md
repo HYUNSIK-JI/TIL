@@ -2061,3 +2061,7 @@ function('spam') # argument : spam
 
 	- python의 IO ! json 파일을 불러오고, dictionary로 변환하는 법을 배울 수 있었다.
 </details>
+<details>
+<summary>😲2022년 7월 17일😲:📌Spring5 Maven Project란?📌</summary>
+
+</details>
