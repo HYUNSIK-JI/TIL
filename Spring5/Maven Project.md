@@ -1,8 +1,9 @@
 # Eclipes(이클립스) Maven Project 만들기 및 Maven(메이븐)이란 무엇일까?
 
-<img src="C:\Users\현식\Desktop\이미지모음\메이븐1.png" alt="메이븐1" style="zoom: 80%;" />
+![메이븐1](https://user-images.githubusercontent.com/59475851/179387415-407028e8-a2f2-4468-8a57-95a28f335c2b.png)
 
-**[1] Maven이란 무엇일까? **
+
+**[1] Maven이란 무엇일까?**
 
 Maven은 지금까지 애플리케이션을 개발하기 위해 반복적으로 진행해왔던 작업들을 지원하기 위하여 등장한 도구이다.
 
@@ -34,19 +35,22 @@ Maven을 사용하게 되면 Maven에 설정한 대로 모든 개발자가 일�
 
 file-new-mavenproject선택
 
-![메이븐2](C:\Users\현식\Desktop\이미지모음\메이븐2.png)
+![메이븐2](https://user-images.githubusercontent.com/59475851/179387431-e4f1c9b8-576e-4cb1-856a-d0bee2487777.png)
+
 
 next 클릭
 
-![메이븐3](C:\Users\현식\Desktop\이미지모음\메이븐3.png)
+![메이븐3](https://user-images.githubusercontent.com/59475851/179387435-f5396602-e461-4bec-ba94-6e63877a9636.png)
+
 
 원하는 내용을 선택후 Next 버튼
 
 만약 웹페이지를 만들고자 한다면 quickstart가 아니라 스크롤을 내리면 나오는 web-app을 선택해야한다
 
 
+![메이븐4](https://user-images.githubusercontent.com/59475851/179387442-dfb26ec4-2664-4bf6-97c5-9f31840fe2fd.png)
 
-![메이븐4](C:\Users\현식\Desktop\이미지모음\메이븐4.png)
+
 
 Group id와 Article id 입력하고 finish버튼을 누르면 생성이 완료된다.
 
@@ -58,11 +62,13 @@ Group id와 Article id 입력하고 finish버튼을 누르면 생성이 완료�
 
 추가할 수있다.
 
-![메이븐5](C:\Users\현식\Desktop\이미지모음\메이븐5.png)
+![메이븐5](https://user-images.githubusercontent.com/59475851/179387443-e48c7f69-aecd-4371-b899-3f73170539cf.png)
+
 
 **[4] Maven Project 디렉토리 설명**
 
-![메이븐6](C:\Users\현식\Desktop\이미지모음\메이븐6.png)
+![메이븐6](https://user-images.githubusercontent.com/59475851/179387448-f5f502b8-3a78-4e32-a034-a4a5cd2938bc.png)
+
 
 <ul>
     <li>src/main/java : 자바 소스 파일 위치 시킵니다. 이 하위에 org.gliderwiki ... 와 같은 패키지를 배치합니다.</li>
@@ -78,7 +84,8 @@ cf)src 하위에 main 부분과 test부분을 경로가 나뉘는 이유는 개�
 
 **[5]POM.xml 파일의 구조**
 
-![메이븐7](C:\Users\현식\Desktop\이미지모음\메이븐7.PNG)
+![메이븐7](https://user-images.githubusercontent.com/59475851/179387450-244828d5-1418-4e88-aae4-d84d79eba471.PNG)
+
 
 
 
@@ -100,10 +107,9 @@ cf)src 하위에 main 부분과 test부분을 경로가 나뉘는 이유는 개�
 
 **url** : 프로젝트 사이트가 있다면 사이트 URL을 등록하는 것이 가능
 
+<br></br>
+***여기서 가장 중요한 것은 dependency 입니다.***
 
+여기에 원하는 라이브러리에 대한 버전이나 기타 등등의 양식을 입력하면 자동으로 라이브러리가 추가되어 사용할 수 있습니다. 예를들어 jdbc를 이용하여 mysql을 사용하고 싶으면 <dependencies></dependencies> 안에 다음과 같은 코드를 삽입하면 됩니다.
 
-
-
-여기서 가장 중요한 것은 dependency 입니다.
-
-여기에 원하는 라이브러리에 대한 버전이나 기타 등등의 양식을 입력하면 자동으로 라이브러리가 추가되어 사용할 수 있습니다. 예를들어 jdbc를 이용하여 mysql을 사용하고 싶으면 <dependencies></dependencies> 안에 다음과 같은 코드를 삽입하면 됩니다.![메이븐8](C:\Users\현식\Desktop\이미지모음\메이븐8.PNG)
+![메이븐8](https://user-images.githubusercontent.com/59475851/179387454-113b6a2e-7d02-4819-a6aa-c2ad133ef377.PNG)
