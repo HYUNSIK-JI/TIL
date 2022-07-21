@@ -46,7 +46,7 @@ for t in range(int(input())):
     N = int(input())
     nums = set(str(N))
     c = 1
-    while len(nums)<10:
+    while len(nums) < 10:
         c += 1
         nums.update(set(str(N * c)))
     print(f'#{t + 1} {c * N}')
