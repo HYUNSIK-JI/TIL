@@ -3395,7 +3395,7 @@ class MyClss
 - Private Access Modifier: 본인만 접근 가능하다. (클래스 그 자체이다)
 </details>
 <details>
-<summary>📌2022년 07월 21일📌:🎨 파이썬 응용 심화 와 가상환경🎨 </summary>
+<summary>💡2022년 07월 21일💡:🖋 파이썬 응용 심화 & 가상환경🖋 </summary>
 # 파이썬 응용 심화
 
 ## **List Comprehension**
