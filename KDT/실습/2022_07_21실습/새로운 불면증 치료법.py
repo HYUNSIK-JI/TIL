@@ -40,3 +40,13 @@ for test_case in range(1, int(input()) + 1):
 #출력
 for ans in p:
     print(ans)
+
+#swea 9 풀이법 2
+for t in range(int(input())):
+    N = int(input())
+    nums = set(str(N))
+    c = 1
+    while len(nums)<10:
+        c += 1
+        nums.update(set(str(N * c)))
+    print(f'#{t + 1} {c * N}')
