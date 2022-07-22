@@ -3673,7 +3673,6 @@ def popular_count():
     path = '/movie/popular'
 
     params={
-        'api_key':'3d086799f6ddf19a461e5ed8f4712adf'
     }
     response = requests.get(URL+path, params=params).json()
     data = response.get('results')
@@ -3756,7 +3755,6 @@ def vote_average_movies():
     path = '/movie/popular'
 
     params = {
-        'api_key': '3d086799f6ddf19a461e5ed8f4712adf',
         'language':'ko-KR'
     }
     response = requests.get(URL + path, params=params).json()
@@ -3873,7 +3871,6 @@ def ranking():
     path = '/movie/popular'
 
     params = {
-        'api_key': '3d086799f6ddf19a461e5ed8f4712adf',
         'language': 'ko-KR'
     }
     response = requests.get(URL + path, params=params).json()
@@ -3943,7 +3940,6 @@ def search(title):
     URL = 'https://api.themoviedb.org/3'
     path = '/search/movie'
     params = {
-        'api_key': '3d086799f6ddf19a461e5ed8f4712adf',
         'language': 'ko-KR',
         'query': f'{title}'
     }
@@ -3962,7 +3958,6 @@ def recommendation(title):
     URL = 'https://api.themoviedb.org/3'
     path=f'/movie/{movie_id}/recommendations'
     params = {
-        'api_key': '3d086799f6ddf19a461e5ed8f4712adf',
         'language': 'ko-KR',
         'query': f'{title}'
     }
@@ -4032,7 +4027,6 @@ def search(title):
     URL = 'https://api.themoviedb.org/3'
     path = '/search/movie'
     params = {
-        'api_key': '3d086799f6ddf19a461e5ed8f4712adf',
         'language': 'ko-KR',
         'query': f'{title}'
     }
