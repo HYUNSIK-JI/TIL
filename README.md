@@ -4045,7 +4045,6 @@ def credits(title):
     URL = 'https://api.themoviedb.org/3'
     path = f'/movie/{movie_id}/credits'
     params = {
-        'api_key': '3d086799f6ddf19a461e5ed8f4712adf',
         'language': 'ko-KR',
         'query': f'{title}'
     }
@@ -4071,5 +4070,6 @@ if __name__ == '__main__':
     # {'cast': ['Song Kang-ho', 'Lee Sun-kyun', ..., 'Jang Hye-jin'], 'crew': ['Bong Joon-ho', 'Park Hyun-cheol', ..., 'Yoon Young-woo']}
     # pprint(credits('검색할 수 없는 영화'))
     # None
+api_key는 생략했습니다.
 ```
 </details>
