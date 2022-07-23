@@ -1,16 +1,19 @@
 #### **1. DI(Dependency Injection)란?**
 
 DI는 말 그대로 의존성을 주입한다 라는 뜻이다. 쉽게 설명하면 JAVA에서 객체를 new를 이용하여 생성하는데 이렇게 사용하지 않고 외부에서 생성한 객체를 세터 또는 생성자를 통해 사용하겠다는 의미이다. 이를 의존성 주입이라 한다. 의존성 주입 방법에는 **세터를 이용하거나 생성자**를 이용한 방법 두가지가 있다. 예제로는 생성자를 이용한 방법으로 예제를 공부하겠다
+![DI1](https://user-images.githubusercontent.com/59475851/180596880-03ef8e39-2dd6-4810-b41e-9ac58767ce47.png)
 
-![메이븐7](C:\Users\현식\Desktop\이미지모음\메이븐7.PNG)
+
 
 그림처럼 DI를 이용하지 않고 new를 사용하여 객체를 생성하게 되면 PetOwner와 Dog간 강한 결합이 생기게 되어 도그를 수정하면 PetOwner가 수정될 수 있다.
 
-![DI2](C:\Users\현식\Desktop\이미지모음\DI2.png)
+![DI2](https://user-images.githubusercontent.com/59475851/180596891-6b94f04e-29c4-4ce5-8934-f9f3e576b542.png)
+
 
 반면 다음과 같이 Bean Container를 이용하여 객체를 생성하고 의존성 주입을 시켜주면 결합이 강하지 않다는 장점이 생긴다. 이때 **Bean Container는 XML로 이루어져 있다.**
 
-![DI3](C:\Users\현식\Desktop\이미지모음\DI3.png)
+![DI3](https://user-images.githubusercontent.com/59475851/180596898-af2be616-1aa7-476d-9b15-f9f7ab54b6a8.png)
+
 
 다음 그림처럼 메인함수에서는 ApplicationContext라는 BeanContainer를 생성하고 미리 작성된 xml에 따라 ApplicationContext는 Dog, Cat, PetOwner라는 객체를 생성하고 Dog, Cat을 PetOwner에 의존성 주입한다. 스프링은 new방식 대신 DI방식을 권장한다.
 
@@ -22,7 +25,8 @@ DI는 말 그대로 의존성을 주입한다 라는 뜻이다. 쉽게 설명하
 
 **File > New > Spring Legacy Project**를 클릭하고 다음과 같은 **Simple Spring Maven** 프로젝트를 생성한다. 프로젝트명은 원하는 프로젝트명을 사용해도 무방하다. 이 실습에서는 helloDI라는 프로젝트명을 사용하겠다.
 
-![DI4](C:\Users\현식\Desktop\이미지모음\DI4.png)
+![DI4](https://user-images.githubusercontent.com/59475851/180596903-8111ce56-b8f6-49ca-8ab1-152b5479fd98.png)
+
 
 **#2 AnimalType, Cat, Dog 생성하기**
 
@@ -193,7 +197,8 @@ public class MainApp {
 
 프로젝트를 Run 하게 되면 다음과 같은 결과를 확인할 수 있다.
 
-![DI5](C:\Users\현식\Desktop\이미지모음\DI5.png)
+![DI5](https://user-images.githubusercontent.com/59475851/180596911-5ec6f668-f2bd-4059-9fd3-b126f1087a78.png)
+
 
 **마무리**
 
