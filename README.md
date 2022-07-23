@@ -4073,3 +4073,7 @@ if __name__ == '__main__':
 api_key는 생략했습니다.
 ```
 </details>
+<details>
+	<summary>🖥2022년 07월 23일🖥: 🤔DI란 무엇인가??🤔</summary>
+	https://github.com/HYUNSIK-JI/TIL/blob/master/Spring5/DI(Dependency%20Injection).md
+</detatils>
