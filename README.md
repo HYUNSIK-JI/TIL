@@ -4243,4 +4243,174 @@ api_key는 생략했습니다.
 - 입력과 출력 : 입력은 어떤 변수와 타입으로 관리하는가, 출력은 무엇을 어떤 방식으로 하는가
 - 변수 : 어떤 변수를 어떤 타입으로 관리하고 조작하는가
 - 반복과 조건 : 반복문과 조건문은 어떤 의미로 동작하는가
-</datails>
+</details>
+<details>
+<summary>😲2022년 07월 27일😲:🖥 파이썬 자료구조🖥</summary>
+## 문자열(String)
+
+문자열은 immutable(변경 불가능한) 자료형!
+
+```
+# 문자열은 변경 불가능하지만 변경 가능한것처럼 조작할 수 있다.
+# 하지만 아래와 같이 apple banana 라는 문자열을 새로 만든것이지 실제로 더해진것은 아니다.
+word = "apple"
+print(word)
+print(id(word))
+>>> apple
+>>> 1352749370800
+
+word += " banana"
+print(word)
+print(id(word))
+>>> apple banana
+>>> 1352749417520
+```
+
+
+
+#### 문자열 슬라이싱
+
+s = 'abcdefghi'
+
+- s[:3] 'abc'
+- s[5:] 'fghi
+- s[:] 'abcdefghi'
+- s[2:5] 'cde'
+- s[-6:-2] 'defg'
+- s[2:5:-1] ''
+- s[5:2:-1] 'fed'
+
+|       | a    | b    | c    | d    | e    | f    | g    | h    | i    |
+| ----- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| index | 0    | 1    | 2    | 3    | 4    | 5    | 6    | 7    | 8    |
+| index | -9   | -8   | -7   | -6   | -5   | -4   | -3   | -2   | -1   |
+
+-인덱스가 헷갈린다면 -인덱스 앞에 전체 인덱스를 넣어서 계산해보자
+
+ex) 9-6 = 3 = d, 9-2 = 7
+
+
+
+#### 문자열 메서드
+
+1. .split(기준 문자)
+
+   - 문자열을 일정 기준으로 나누어 리스트로 반환
+
+   - 괄호 안에 아무것도 넣지 않으면 자동으로 공백을 기준으로 설정
+
+     ```
+     word = "I play the piano"
+     print(word.split())
+     # ['I', 'play', 'the', 'piano']
+     ```
+
+2. .strip(제거할 문자)
+
+   - 문자열의 양쪽 끝에 있는 특정 문자를 모두 제거한 새로운 문자열 반환
+
+   - 괄호 안에 아무것도 넣지 않으면 자동으로 공백을 제거 문자로 설정하고
+
+   - 제거할 문자를 여러개 넣으면 해당하는 모든 문자 제거
+
+     ```
+     word = "aHello Worlda"
+     print(word.strip("a"))
+     ```
+
+3. .find(찾는 문자)
+
+   - 특정 문자가 처음으로 나타나는 **위치(인덱스)** 를 반환
+
+   - 찾는 문자가 없다면 -1을 반환
+
+     ```
+     word = "apple"
+     print(word.find("p"))
+     # 1
+     print(word.find("k")
+     # -1
+     ```
+
+4. .index(찾는 문자)
+
+   - 특정 문자가 처음으로 나타나는 **위치(인덱스)** 를 반환
+
+   - 찾는 문자가 없다면 오류 발생
+
+     ```
+     word = "apple"
+     print(word.find("p"))
+     # 1
+     print(word.find("k")
+     # ValueError : substring not found
+     ```
+
+5. .count(개수를 셀 문자)
+
+   - 문자열에서 특정 문자가 몇 개인지 반환
+
+   - 문자 뿐만 아니라, 문자열의 개수도 확인 가능
+
+     ```
+     word = "banana"
+     print(word.count("a"))
+     # 3
+     ```
+
+6. .replace(기존 문자, 새로운 문자)
+
+   - 문자열에서 기존 문자를 새로운 문자로 **수정** 한 새로운 문자열 반환
+
+   - 특정 문자를 빈 문자열("")로 수정하여 마치 해당 문자를 삭제한 것 같은 효과 가능
+
+     ```
+     word = "happyhacking"
+     print(word.replace("happy", "angry"))
+     # angryhacking
+     ```
+
+7. 삽입할 문자.join(iterable)
+
+   - iterable의 **각각 원소 사이에 특정 문자를 삽입** 한 새로운 문자열 반환
+
+   - 공백 출력, 콤마 출력 등 원하는 **출력** 형태를 위해 사용
+
+     ```
+     word = "happyhacking"
+     print(" ".join(word))
+     # h a p p y h a c k i n g
+     ```
+
+#### 아스키(ASCII) 코드
+
+컴퓨터는 기본적으로 숫자만 이해할 수 있다.
+
+그렇다면 문자는 어떻게 저장될까?
+
+**ASCII(American Standard Code for Information Interchange)** 미국 정보교환 표준부호
+
+아스키 코드란?
+
+- 알파벳을 표현하는 대표 인코딩 방식
+- 각 문자를 표현하는데 1byte(8bits) 사용
+  - 1bit : 통신 에러 검출용
+  - 7bit : 문자 정보 저장(총 128개)
+
+
+
+1. ord(문자)
+
+   - 문자를 아스키코드로 변환하는 내장함수
+
+2. chr(아스키코드)
+
+   - 아스키코드를 문자로 변환하는 내장함수
+
+     ```
+     print(ord("A"))
+     # 65
+     print(chr(65))
+     # A
+     ```
+</details>
