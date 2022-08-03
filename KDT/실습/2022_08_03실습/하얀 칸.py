@@ -1,12 +1,13 @@
 # 풀이법1 하얀 칸
-# chess = [list(input()) for _ in range(8)]
-#
-# cnt = 0
-# for x in range(8):
-#     for y in range(8):
-#         if (x + y) % 2 == 0 and chess[x][y] == 'F':
-#             cnt += 1
-# print(cnt)
+chess = [list(input()) for _ in range(8)]
+
+cnt = 0
+for x in range(8):
+    for y in range(8):
+        # 배치 순서가 2칸씩 떨어져있으므로
+        if (x + y) % 2 == 0 and chess[x][y] == 'F':
+            cnt += 1
+print(cnt)
 
 # 풀이법 2 BFS
 import sys
