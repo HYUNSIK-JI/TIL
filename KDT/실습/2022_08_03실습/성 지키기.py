@@ -4,7 +4,7 @@ input = sys.stdin.readline
 
 n, m = map(int, input().split())
 
-maps = [list(input().rstrip()) for _ in range(n)]
+maps = [input().rstrip() for _ in range(n)]
 
 # 행,열 로 카운트 하기 위한 변수
 row, col = 0, 0
