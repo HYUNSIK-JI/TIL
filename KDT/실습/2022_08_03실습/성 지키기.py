@@ -4,22 +4,14 @@ input = sys.stdin.readline
 
 n, m = map(int, input().split())
 
-maps = [input().rstrip() for _ in range(n)]
+maps = [list(input().rstrip()) for _ in range(n)]
+maps2 = list(map(list, zip(*maps)))
 
-# 행,열 로 카운트 하기 위한 변수
 row, col = 0, 0
 for i in range(n):
-    # 경비원이 없다면
     if not maps[i].count("X"):
-        # 카운트
         row += 1
-
-# 기존 maps의 행 을 열로 만든 2차원 리스트 형태로 변환
-maps = list(map(list, zip(*maps)))
-
 for i in range(m):
-    # 경비원이 없다면
-    if not maps[i].count("X"):
-        # 카운트
+    if not maps2[i].count("X"):
         col += 1
-print(col if row < col else row)
+print(max(row, col))
