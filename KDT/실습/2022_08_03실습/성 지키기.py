@@ -17,7 +17,7 @@ for i in range(n):
 # 기존 maps의 행 을 열로 만든 2차원 리스트 형태로 변환
 maps = list(map(list, zip(*maps)))
 
-for i in range(n):
+for i in range(m):
     # 경비원이 없다면
     if not maps[i].count("X"):
         # 카운트
