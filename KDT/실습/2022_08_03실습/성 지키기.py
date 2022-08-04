@@ -5,6 +5,8 @@ input = sys.stdin.readline
 n, m = map(int, input().split())
 
 maps = [list(input().rstrip()) for _ in range(n)]
+
+# 기존의 maps의 n * m 상태를 - > m * n으로 변경
 maps2 = list(map(list, zip(*maps)))
 
 row, col = 0, 0
