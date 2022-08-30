@@ -1,0 +1,38 @@
+/* 아래에 CSS를 작성해주세요. */
+.title{
+  color: black;
+  text-align: center;
+}
+.cards{
+  width: 900px;
+  margin: auto;
+  display:flex;
+}
+.card{
+  width: 300px;
+  margin: 10px;
+  /* border : 1px solid violet; */
+}
+.image-list{
+  width: 100%;
+  border-radius: 1rem;
+}
+.product-list{
+  color: dimgrey;
+  text-align: left;
+  font-size: 13px;
+}
+.product-list-1{
+  color: dimgrey;
+  text-align: left;
+  font-size: 10px;
+}
+.product-1{
+  color: black;
+  font-size: 16px;
+  text-align: left;
+}
+.container{
+  width: 900px;
+  text-align: center;
+}

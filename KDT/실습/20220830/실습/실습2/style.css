@@ -1,0 +1,33 @@
+/* 아래에 CSS를 작성해주세요. */
+.card{
+  width: 300px;
+}
+.image{
+  width: 100%;
+  border-radius: 10px;
+}
+.brand{
+  font-size: 13px;
+  color: #828c94;
+  margin: 3px;
+}
+.product_name{
+  font-size: 14px;
+  color: black;
+  margin: 3px;
+}
+.pricefont{
+  font-size: 15px;
+  margin: 3px;
+}
+.price{
+  color: #35c5f0;
+}
+.review_size{
+  font-size: 12px;
+  margin: 3px;
+  /* color: red; */
+}
+.review_count{
+  color: darkgrey;
+}
