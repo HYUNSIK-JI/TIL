@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/_reset.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"/>
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+
+  <nav class="navbar navbar-expand-lg bg-light px-5 sticky top0">
+    <div class="container">
+      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Shop
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">All Products</a></li>
+              <li><a class="dropdown-item" href="#">Popular Items</a></li>
+              <li><a class="dropdown-item" href="#">New Arrivals</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <form class="d-flex">
+        <button class="btn btn-outline-dark" type="submit">
+          <svg xmlns="file:///C:/Users/user/Downloads/cart-fill.svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>Cart<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+        </button>
+      </form>
+    </div>
+  </nav>
+
+  <div class="container px-4 px-lg-5 my-5">
+    <div class="row gx-4 gx-lg-5 align-items-center">
+      <div class="col-md-6">
+        <img src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg">
+      </div>
+      <div class="col-md-6 d-fex">
+        <div class="my-3">
+          <p>SKU: BST-498</p>
+          <h1 class="fw-bolder">Shop item template</h1>
+          <p><del>$45.00 </del> $40.00</p>
+          <br>
+          <p class="fs-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum, officiis. Provident ullam, voluptatibus laborum officia animi impedit ipsum ipsam! Ut consequuntur id tempore saepe inventore quae quod pariatur tempora iste.</p>
+          <div class="d-flex">
+            <label for="exampleColorInput" class="form-label"></label>
+            <input type="number" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+            <i class="bi-cart-fill me-1"></i>
+            Add to cart
+            </button>
+          </div>
+        <div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py5 bg-light">
+    <div class="container px-4 px-lg-5 mt-5">
+      <h2 class="fw-bolder mb-4">Related products</h2>
+    </div>
+    <div class="container py-5">
+      <div class="container text-center py-5">
+        <div class="row">
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top" alt="...">
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold">Fancy Product</h5>
+                <p class="card-text">$40.00 - $80.00</p>
+                <a href="#" class="btn btn-light">view options</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+              <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top" alt="...">
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold">Special Item</h5>
+                <div class="d-flex justify-content-center">
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                </div>
+                <p class="card-text"><del>$20.00</del> $18.00</p>
+                <a href="#" class="btn btn-light">Add to cart</a>
+              </div>
+            </div>
+          </div>
+            
+          <div class="col">
+            <div class="card h-100">
+              <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+              <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top" alt="...">
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold">Sale Item</h5>
+                <p class="card-text"><del>$50.00</del> $25.00</p>
+                <a href="#" class="btn btn-light">Add to cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <img src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" class="card-img-top" alt="...">
+              <div class="card-body p-4">
+                <h5 class="card-title fw-bold">Popular Item</h5>
+                <div class="d-flex justify-content-center">
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                  <div class="bi bi-star-fill text-warning"></div>
+                </div>
+                <p class="card-text">$40.00</p>
+                <a href="#" class="btn btn-light">Add to cart</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright © Your Website 2022</p>
+    </div>
+  </footer>
+</body>
+</html>
