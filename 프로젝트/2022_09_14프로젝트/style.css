@@ -1,0 +1,7 @@
+.item{
+  background-image: url('./images/movie4.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-size: 100% 100%;
+}

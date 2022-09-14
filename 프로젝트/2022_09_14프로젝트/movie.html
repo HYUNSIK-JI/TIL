@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style></style>
+</head>
+<body>
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+    <div class="container-fluid py-1 px-0">
+      <a class="navbar-brand" href="#">
+        <img src="./images/logo.png" alt="Bootstrap" width="100" height="72">
+      </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+            <a class="nav-link" href="community.html">Community</a>
+            <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#myModal">Login</a>
+            <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-bs-target="#exampleModal"></button>
+                  </div>
+                  <div class="modal-body" id="exampleModal">
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- main -->
+    <div class="container my-5">
+      <div class="row gx-4">
+        <div class="col-md-3">
+          <img src="./images/movie1.jpg" class="img-thumbnail rounded float-start">
+        </div>
+        <div class="col-md-9">
+          <h2 class="fw-bold">쇼생크 탈출</h2>
+          <h3>The Shawshank Redemption, 1994</h3>
+          <div class="row">
+            <div class="col-md-3">
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-3">개봉</dt>
+                <dd>1995.02.04</dd>
+              </dl>
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-2">재개봉</dt>
+                <dd>2016.02.24</dd>
+              </dl>
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-3">장르</dt>
+                <dd>드라마</dd>
+              </dl>
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-2">국가</dt>
+                <dd>미국</dd>
+              </dl>
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-2">등급</dt>
+                <dd>15세이상관람가</dd>
+              </dl>
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-1">러닝타임</dt>
+                <dd>133분,142분(재개봉)</dd>
+              </dl>
+            </div>
+            <div class="col-md-3">
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-3">평점</dt>
+                <dd><i class="bi bi-star-fill text-warning"></i> 9.6</dd>
+              </dl>
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-2">누적 관객</dt>
+                <dd>11,413명</dd>
+              </dl>
+              <dl class="list_cont d-flex my-2">
+                <dt class="me-3">영화정보</dt>
+                <!-- <i class="bi bi-question-lg"></i> -->
+                <i class="muted bi bi-question-lg"><a href="#" data-bs-toggle="tooltip" data-bs-title="Default tooltip"></a></i>
+              </dl>
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-block">
+            <a class="btn btn-dark active " href="https://watcha.com/contents/mNdKBkO?utm_campaign=metadata&utm_source=kakao&utm_medium=movie" type="button"><img class="me-2" src="./images/wattpad.png">왓챠</a>
+            <a class="btn btn-dark active" href="https://www.netflix.com/kr/title/70005379" type="button"><img class="me-2"src="./images/free-icon-netflix-2504929.png">넷플릭스</a>
+            <a class="btn btn-dark active" href="https://www.wavve.com/player/movie?movieid=MV_CD01_WR0000011371" type="button"><img class="me-2" src="./images/letter-w.png">웨이브</a>
+          </div>
+        </div>
+      </div>
+      <ul class="nav nav-tabs my-3 position-sticky" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">주요정보</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">출연/제작</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">영상/포토</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">평점</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0"><p class="fw-bold">
+          두려움은 너를 죄수로 가두고<br>희망은 너를 자유롭게 하리라</p>
+          <p>촉망 받던 은행 부지점장 ‘앤디(팀 로빈슨 分)’는 아내와 그 애인을 살해한 혐의로 종신형을 받고 쇼생크 교도소에 수감된다...</p>
+          <details> 
+            강력범들이 수감된 이곳에서 재소자들은 짐승 취급 당하고, 혹여 간수 눈에 잘못 보였다가는 개죽음 당하기 십상이다. 처음엔 적응 못하던 ‘앤디’는 교도소 내 모든 물건을 구해주는 ‘레드(모건 프리먼 分)’와 친해지며 교도소 생활에 적응하려 하지만, 악질 재소자에게 걸려 강간까지 당한다.<br>
+            그러던 어느 날, 간수장의 세금 면제를 도와주며 간수들의 비공식 회계사로 일하게 되고, 마침내는 소장의 검은 돈까지 관리해주게 된다. 덕분에 교도소 내 도서관을 열 수 있게 되었을 무렵, 신참내기 ‘토미(길 벨로우스 分)’로부터 ‘앤디’의 무죄를 입증할 기회를 얻지만, 노튼 소장은 ‘앤디’를 독방에 가두고 ‘토미’를 무참히 죽여버리는데...
+            <summary>더보기</summary>
+          </details>
+          <hr>
+          <p>제작된 지 16년이 지난 지금에도 꾸준히 사랑 받고 있는 영화. 촉망받던 은행 부지점장 앤디는 아내와 애인을 살해한 혐의로 <br>
+            종신형을 받고 쇼생크 교도소에 수감된다. 강력범이 수감된 이곳에서 재소자들은 짐승 취급을 당하거나, 간수 눈에 잘못 보이면 <br>
+            죽음을 당할 수도 있다. 적응하지 못하던 앤디는 간수장의 세금 면제를 도와주며 비공식 회계사로 일을 하게 되고, <br>
+            조금씩 희망을 찾으려 하지만 이내 좌절당하는 일이 반복된다. 앤디는 감옥 생활에 길들여져 가면서도 끝까지 희망을 놓지 않는다.<br>
+             절망적인 상황 속에서 인간의 나약함과 희망에 대해 이야기하는 영화 <쇼생크 탈출>은 미국 영화 정보 사이트 IMDB에서<br>
+              <대부>를 제치고 네티즌 평점 1위를 받았다. (2016년 제4회 무주산골영화제)
+          </p>
+          <div class="my-5">
+            <h4 class="fw-bold">출연진</h4>
+            <hr>
+            <div class="d-flex justify-content-between">
+              <div><img src="./images/p1.jpeg"><p>프랭크 다라본트<br>감독</p></div>
+              <div><img src="./images/다운로드.jpg"><p>팀 로빈스<br>주연</p></div>
+              <div><img src="./images/다운로드 (1).jpg"><p>모건 프리먼<br>주연</p></div>
+              <div><img src="./images/다운로드 (2).jpg"><p>밥 건튼<br>출연</p></div>
+              <div><img src="./images/다운로드 (3).jpg"><p>윌리엄 새들러<br>출연</p></div>
+              <div><img src="./images/다운로드 (4).jpg"><p>클랜시 브라운<br>출연</p></div>
+              <div><img src="./images/다운로드 (5).jpg"><p>길 벨로우스<br>출연</p></div>
+           </div>
+           <h4 class="fw-bold">영상/포토</h4>
+           <div class="row gx-5 my-3">
+              <div class="col">
+                <img src="./images/a.jpg">
+              </div>
+              <div class="col">
+                <img src="./images/b.jpg">
+              </div>
+          </div>
+          <div class="row gx-0 my-3">
+            <div class="col-md-3">
+              <img src="./images/c.jpg" class="rounded mx-auto d-block" width="300" height="150">
+            </div>
+            <div class="col-md-3">
+              <img src="./images/d.jpg" class="rounded mx-auto d-block" width="300" height="150">
+            </div>
+            <div class="col-md-3">
+              <img src="./images/e.jpg" class="rounded mx-auto d-block" width="300" height="150">
+            </div>
+            <div class="col-md-3">
+              <img src="./images/f.jpg" class="rounded mx-auto d-block" width="300" height="150">
+            </div>
+          </div>
+          <h4 class="fw-bold">원작 1</h4>
+          <hr>
+          <div class="d-flex my-3">
+            <img src="./images/movie1.jpg " class="" width="150" height="200">
+            <div class="d-flex flex-column mx-3">
+              <h5 class="fs-3 fw-bold">리타 헤이워드와 쇼생크 탈출(밀리언셀러 클럽 1)</h5>
+              <p class="fs-5 fw-bold">도서</p>
+              <p>스티븐 킹</p>
+            </div>
+          </div>
+          <h4 class="fw-bold">OST 1</h4>
+          <hr>
+          <div class="d-flex my-3">
+            <img src="./images/movie1.jpg" class="" width="150" height="200">
+            <div class="d-flex flex-column mx-3 my-3">
+              <h5 class="fs-3 fw-bold">쇼생크 탈출 OST</h5>
+            </div>
+          </div>  
+          <h4 class="fw-bold">영화 속 명대사</h4>
+          <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="card text-bg-dark">
+                  <img src="./images/dsa.jpg" class="card-img" alt="..." width="150" height="200">
+                  <div class="card-img-overlay">
+                    <p class="card-text text-center fs-1 my-5" >간단한 선택이다. 살기위해 바쁘던지 죽기위해 바쁘던지</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card text-bg-dark">
+                  <img src="./images/dsa.jpg" class="card-img" alt="..." width="150" height="200">
+                  <div class="card-img-overlay">
+                    <p class="card-text text-center fs-1 my-5">두려움은 당신을 포로로 묶어놓지만, 희망은 당신을 자유롭게 한다</p>
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="card text-bg-dark">
+                  <img src="./images/dsa.jpg" class="card-img" alt="..." width="150" height="200">
+                  <div class="card-img-overlay">
+                    <p class="card-text text-center fs-1 my-5">희망은 좋은거예요. 절대 사라지지 않아요</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <div class="container">
+          <h3>감독</h3>
+          <div class="container d-flex my-5">
+            <img src="./images/p1.jpeg">
+            <div class="container d-flex flex-column">
+              <p>프랭크 다라본트</p>
+              <p>Frank Darabont</p>
+            </div>
+          </div>
+          <h3>주연</h3>
+          <div class="container d-flex my-5">
+            <img src="./images/다운로드.jpg">
+            <div class="container d-flex flex-column">
+              <p>팀 로빈스</p>
+              <p>Tim Robbins</p>
+            </div>
+            <img src="./images/다운로드 (1).jpg">
+            <div class="container d-flex flex-column">
+              <p>모건 프리먼</a>
+              <p>Morgan Freeman</p>
+              <p>레드(엘리스 보이드 레딩)역</p>
+            </div>
+          </div>
+          <h3>출연</h3>
+          <div class="container my-5">
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (2).jpg">
+                <div class="container d-flex flex-column">
+                  <p>밥 건튼</p>
+                  <p>Bob Gunton</p>
+                  <p>워든 노튼 소장 역</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (3).jpg">
+                  <div class="container d-flex flex-column">
+                    <p>윌리엄 새들러</a>
+                    <p>William Sadler</p>
+                    <p>헤이우드 역</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (4).jpg">
+                  <div class="container d-flex flex-column">
+                    <p>클랜시 브라운</a>
+                    <p>Clancy Brown</p>
+                    <p>하들리 역</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (2).jpg">
+                <div class="container d-flex flex-column">
+                  <p>밥 건튼</p>
+                  <p>Bob Gunton</p>
+                  <p>워든 노튼 소장 역</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (3).jpg">
+                  <div class="container d-flex flex-column">
+                    <p>윌리엄 새들러</a>
+                    <p>William Sadler</p>
+                    <p>헤이우드 역</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (4).jpg">
+                  <div class="container d-flex flex-column">
+                    <p>클랜시 브라운</a>
+                    <p>Clancy Brown</p>
+                    <p>하들리 역</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (2).jpg">
+                <div class="container d-flex flex-column">
+                  <p>밥 건튼</p>
+                  <p>Bob Gunton</p>
+                  <p>워든 노튼 소장 역</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (3).jpg">
+                  <div class="container d-flex flex-column">
+                    <p>윌리엄 새들러</a>
+                    <p>William Sadler</p>
+                    <p>헤이우드 역</p>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <img src="./images/다운로드 (4).jpg">
+                  <div class="container d-flex flex-column">
+                    <p>클랜시 브라운</a>
+                    <p>Clancy Brown</p>
+                    <p>하들리 역</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
+        <h2>포토</h2>
+        <div class="row gx-0 my-3">
+          <div class="col-md-3">
+            <img src="./images/c.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/d.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/e.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/f.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+        </div>
+        <div class="row gx-0 my-3">
+          <div class="col-md-3">
+            <img src="./images/a.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/b.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/c.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/d.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+        </div>
+        <div class="row gx-0 my-3">
+          <div class="col-md-3">
+            <img src="./images/d.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/a.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/e.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/b.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+        </div>
+        <div class="row gx-0 my-3">
+          <div class="col-md-3">
+            <img src="./images/f.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/d.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/b.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+          <div class="col-md-3">
+            <img src="./images/c.jpg" class="rounded mx-auto d-block" width="300" height="150">
+          </div>
+        </div>
+      </div>
+        <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">
+          <a class="nav-link active text-center fs-1 fw-bold" aria-current="page" href="community.html">평점 보러가기</a>
+        </div>
+      </div>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <p>web-bootstrap PJT, by Shark, YJ</p>
+    </div>
+  <!-- js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

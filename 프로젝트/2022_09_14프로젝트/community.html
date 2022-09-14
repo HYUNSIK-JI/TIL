@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+  <!-- nav-footer -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container-fluid py-1 px-0">
+        <a class="navbar-brand" href="#">
+          <img src="./images/logo.png" alt="Bootstrap" width="100" height="72">
+        </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              <a class="nav-link active" href="community.html">Community</a>
+              <a class="nav-link" href="" data-bs-toggle="modal" data-bs-target="#myModal">Login</a>
+              <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Modal title</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" data-bs-target="#exampleModal"></button>
+                    </div>
+                    <div class="modal-body" id="exampleModal">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- main_title -->
+    <div class="container d-flex justify-content-center my-5">
+      <h2 class="fw-bold">Community</h2>
+    </div>
+    <div class="container">
+      <div class="row gx-4">
+        <div class="col-lg-2">
+          <aside>
+            <div class="card">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">Boxoffice</li>
+                <li class="list-group-item">Movies</li>
+                <li class="list-group-item">Genres</li>
+                <li class="list-group-item">Actors</li>
+              </ul>
+            </div>
+
+          </aside>
+        </div>
+        <!-- 992이상 -->
+        <div class="col-lg-10 d-none d-lg-block">
+          <table class="table table-striped">
+            <thead>
+              <tr class="table-dark">
+                <th scope="col-lg-2">영화 제목</th>
+                <th scope="col-lg-2">글 제목</th>
+                <th scope="col-lg-2">작성자</th>
+                <th scope="col-lg-2">작성 시간</th>
+                <th scope="col-lg-2">리뷰 작성</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">쇼생크 탈출</th>
+                <td>쇼생크 탈출 후기</td>
+                <td>최유정</td>
+                <td>30 minute ago</td>
+                <td><a class="btn btn-primary" href="form.html" role="button">리뷰 작성하기</a>
+              </tr>
+              <tr>
+                <th scope="row">죽은 시인의 사회</th>
+                <td>죽은 시인의 사회 후기....</td>
+                <td>지현식</td>
+                <td>15 second ago</td>
+                <td><a class="btn btn-primary" href="form.html" role="button">리뷰 작성하기</a>
+              </tr>
+              <tr>
+                <th scope="row">다크나이트 라이즈</th>
+                <td>다크나이트 라이즈!! 강추!!</td>
+                <td>최유정</td>
+                <td>13 minute ago</td>
+                <td><a class="btn btn-primary" href="form.html" role="button">리뷰 작성하기</a>
+              </tr>
+              <tr>
+                <th scope="row">그랜드 부다페스트 호텔</th>
+                <td>강력!! 추천!!</td>
+                <td>지현식</td>
+                <td>1 hours ago</td>
+                <td><a class="btn btn-primary" href="form.html" role="button">리뷰 작성하기</a>
+              </tr>
+              <tr>
+                <th scope="row">위대한 쇼맨</th>
+                <td>재미없어요</td>
+                <td>지현식 & 최유정</td>
+                <td>10 minute ago</td>
+                <td><a class="btn btn-primary" href="form.html" role="button">리뷰 작성하기</a>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 992px 이하 -->
+        <div class="d-lg-none row">
+          <div class="col-lg-2 card my-3">
+            <div class="card-body">
+              <h3 class="card-title">Best Movie Ever</h3>
+              <h4 class="card-title">Great Movie Title</h4>
+              <p class="card-text">user</p>
+              <h5>1 minute ago</h5>
+            </div>
+          </div>
+          <div class="col-lg-2 card my-3">
+            <div class="card-body">
+              <h3 class="card-title">Best Movie Ever</h3>
+              <h4 class="card-title">Great Movie Title</h4>
+              <p class="card-text">user</p>
+              <h5>1 minute ago</h5>
+            </div>
+          </div>
+          <div class="col-lg-2 card my-3">
+            <div class="card-body">
+              <h3 class="card-title">Best Movie Ever</h3>
+              <h4 class="card-title">Great Movie Title</h4>
+              <p class="card-text">user</p>
+              <h5>1 minute ago</h5>
+            </div>
+          </div>
+          <div class="col-lg-2 card my-3">
+            <div class="card-body">
+              <h3 class="card-title">Best Movie Ever</h3>
+              <h4 class="card-title">Great Movie Title</h4>
+              <p class="card-text">user</p>
+              <h5>1 minute ago</h5>
+            </div>
+          </div>
+        </div>
+        <div class="container d-flex justify-content-center py-3">
+          <div class="btn-group me-2 " role="group" aria-label="First group">
+            <button type="button" class="btn btn-outline-secondary">Previous</button>
+            <button type="button" class="btn btn-outline-secondary">1</button>
+            <button type="button" class="btn btn-outline-secondary">2</button>
+            <button type="button" class="btn btn-outline-secondary">3</button>
+            <button type="button" class="btn btn-outline-secondary">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center py-5">
+      <p>Web-bootstrap PJT, by Shark, YJ</p>
+    </footer>
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>
