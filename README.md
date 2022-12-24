@@ -121,7 +121,7 @@ Today I Learned
 $ 뒤에 명령어를 입력하여 사용
 
 
-
+ 
 ### CLI 기초 명령어
 
 - `pwd` (*print working directory*) : 현재 디렉토리 출력
