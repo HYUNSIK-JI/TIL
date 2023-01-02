@@ -1,0 +1,56 @@
+[java]사용자로 부터 값 입력받기, Scanner
+ssung.k 2019. 3. 20. 16:23
+
+사용자로부터 값 입력 받기
+ 
+
+java에서는 Scanner 클래스를 사용하여 값을 입력받을 수 있다. 이를 통해서 정수, 실수, 단어, 줄단위를 쉽게 읽어올 수 있다.
+
+Scanner 호출
+import java.util.Scanner;
+Scanner를 사용하기 위해서는 import를 통해 호출합니다. java.util 패키지에 포함되어 있으므로 다음과 같이 import 합니다.
+
+Scanner의 객체 생성
+Scanner sc = new Scanner(System.in);
+sc라는 객체를 생성하여 System.in으로 입력한 값을 바이트 단위로 읽는 것을 의미합니다.
+
+Scanner의 메소드
+Scanner는 각 상황에 따라서 다양한 메소드를 제공한다.
+
+예시를 통해 각 메소드를 알아보자.
+
+import java.util.Scanner;
+
+public class test {
+
+	public static void main(String[] args) {
+		String name;
+		int age;
+		double height;
+		String intro;
+		String buffer;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("이름을 입력하세요");
+		name = sc.next();
+		System.out.println("나이를 입력하세요");
+		age = sc.nextInt();
+		System.out.println("키를 입력하세요");
+		height = sc.nextDouble();
+		System.out.println("자기소개를 입력하세요");
+		buffer = sc.nextLine();
+		intro = sc.nextLine();
+		
+		System.out.println("이름은 "+name+"나이는 "+age+",키는 "+height+"입니다.");
+		System.out.println(intro);
+	}
+}
+next + {자료형}()
+
+예시에서는 대표적으로 nextInt()와 nextDouble() 을 사용하였다. 뒤에 사용한 자료형에 맞는 값을 받을 수 있다.
+nextLine()
+
+한 줄을 통째로 받아온다. 근데 nextLine()은 개행문자까지 받을 수 있기 때문에 위에서 buffer라는 변수에 nextLine()을 받아주지 않는다면 앞에서 남은 개행을 받아와 자기소개는 입력을 받지 못하게 된다. 따라서 buffer 변수로 한 번 더 받아줌으로서 이 문제를 해결하였다.
+next()
+
+화이트 스페이스를 기준으로 한 단어를 받아온다.
