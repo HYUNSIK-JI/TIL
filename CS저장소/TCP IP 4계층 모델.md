@@ -2,7 +2,7 @@
 
 
 
-**인터넷 프로토콜 스위트(internet protocol suite)**는 인터넷에서 컴퓨터들이 서로 정보를 주고받는 데 쓰이는 프로토콜의 집합이며, 이를 **TCP/IP 4계층 모델**로
+**인터넷 프로토콜 스위트(internet protocol suite)** 는 인터넷에서 컴퓨터들이 서로 정보를 주고받는 데 쓰이는 프로토콜의 집합이며, 이를 **TCP/IP 4계층 모델**로
 
 설명하거나 **OSI 7계층 모델**로 설명하기도 한다. 우선, **TCP/IP 4계층 모델**을 중심으로 쓸 예정이며, 이 계층 모델은 네트워크에서 사용되는 통신 프로토콜의 집합으로 계층들은 프로토콜의 네트워킹 범위에 따라 네 개의 추상화 계층으로 구성된다.
 
@@ -12,7 +12,8 @@
 
 **TCP/IP 계층**은 네 개의 계층을 가지고 있으며 **OSI 7계층**과 많이 비교한다.
 
-![계층 비교](TCP IP 4계층 모델.assets/계층 비교.jpg)
+![계층 비교](https://user-images.githubusercontent.com/59475851/210757484-9fc36cb6-821f-454d-8594-dd34016abf5b.jpg)
+
 
 위의 그림 처럼 **TCP/IP 계층**과  달리 **OSI 계층 **은 애플리케이션 계층을 세 개로 쪼개고 **링크 계층**을 **데이터 링크 계층**, **물리 계층**으로 나눠서 표현하는 점과 **인터넷 계층**을 **네트워크 계층**으로 부른다는 점이 다르다.
 
@@ -24,8 +25,7 @@
 
 각 계층을 대표 하는 스택을 정리 한 그림은 아래와 같다.
 
-![TCP IP 4계층](TCP IP 4계층 모델.assets/TCP IP 4계층.jpg)
-
+![TCP IP 4계층](https://user-images.githubusercontent.com/59475851/210757535-3c343551-6f5c-49c4-988b-ae75c6004164.jpg)
 
 
 우선, **애플리케이션 계층** 부터 하나씩 살펴 볼것이다.
@@ -120,8 +120,7 @@
 
 **가상회선 패킷 교환 방식**은 각 패킷에 가상회선 식별자가 포함되 있으며 모든 패킷을 전송하면 가상회선이 해제되고 패킷들은 전송된 **순서대로** 도착하는 방식을 말한다.
 
- ![가상회선 패킷교환방식](TCP IP 4계층 모델.assets/가상회선 패킷교환방식.jpg)
-
+![가상회선 패킷교환방식](https://user-images.githubusercontent.com/59475851/210757595-746ed70a-3875-49e6-9327-ddecfdcc417b.jpg)
 
 
 위의 그림을 보면 3, 2, 1로 이루어진 패킷이 어떠한 회선을 따라 순서대로 도착하는 것을 알수 있다.
@@ -132,8 +131,8 @@
 
 **데이터그램 패킷 교환 방식** 은 패킷이 독립적으로 이동하며 최적의 경로를 선택하여 가는데, 하나의 메시지에서 분할된 여러 패킷은 서로 다른 경로로 전송 될수 있으며 도착한 **'순서가 다를 수'** 있는 방식을 말한다.
 
-![데이터그램 패킷 교환방식](TCP IP 4계층 모델.assets/데이터그램 패킷 교환방식.jpg)
 
+![데이터그램 패킷 교환방식](https://user-images.githubusercontent.com/59475851/210757614-fc13acde-aad9-4255-b921-8f1218f12020.jpg)
 
 
 위의 그림을 보면 3, 2, 1로 이루어진 패킷이 순서도 다르고 어떠한 회선을 중심으로 가는 것이 아니라 따로따로 이동하여 순서도 다르게 도착하는 것을 알수 있다.
@@ -146,7 +145,8 @@
 
 TCP는 신뢰성을 확보 할때 **3-way handshake** 작업을 진행 한다.
 
-![3-way handshake](TCP IP 4계층 모델.assets/3-way handshake.jpg)
+
+![3-way handshake](https://user-images.githubusercontent.com/59475851/210757630-b2077979-cd57-4220-b314-63a90dcb73cb.jpg)
 
 위의 그림처럼 클라이언트 와 서버가 통신할 때 다음과 같이 세 단계의 과정을 거친다.
 
@@ -183,9 +183,7 @@ Initial Sequence Numbers의 약어, **초기 네트워크 연결을 할 때 할�
 **TCP**가 연결을 해제 할 때는 4-way handshake 과정이 발생한다.
 
 
-
-![4-way handshake](TCP IP 4계층 모델.assets/4-way handshake.jpg)
-
+![4-way handshake](https://user-images.githubusercontent.com/59475851/210757648-e322c909-b7f3-4d10-a20d-b11325d8342e.jpg)
 
 
 1. 먼저 클라이언트가 연결을 닫으려고 할때 **FIN**으로 설정된 세그먼트를 보낸다. 그리고 클라이언트는 **FIN_WAIT_1** 상태로 들어가고 서버의 응답을 기다린다.
@@ -287,9 +285,8 @@ RARP(Rerverse Internet Control Message Protocol): 역주소변환(물리 주소(
 
 전이중화 통신(Full duplex)통신은 양쪽 장치가 동시에 송수신할 수 있는 방식을 말한다. 이는 송신로 와 수신로로 나눠서 데이터를 주고 받으며 현대의 고속 이더넷은 이 방식을 기반으로 통신한다.
 
-![전이중화 통신](TCP IP 4계층 모델.assets/전이중화 통신.jpg)
 
-
+![전이중화 통신](https://user-images.githubusercontent.com/59475851/210757703-58df9031-70d1-408b-87fc-f9229d718213.jpg)
 
 
 
@@ -309,16 +306,16 @@ RARP(Rerverse Internet Control Message Protocol): 역주소변환(물리 주소(
 
 **트위스트 페어 케이블(twisted pair cable)**은 하나의 케이블처럼 보이지만 실제로는 **여덟 개의 구리선을 두 개**씩 꼬아서 묶은 케이블을 지칭한다.
 
-![트위스트 페어 케이블](TCP IP 4계층 모델.assets/트위스트 페어 케이블.jpg)
 
+![트위스트 페어 케이블](https://user-images.githubusercontent.com/59475851/210757721-200dda26-b798-4ad8-a235-076b33574652.jpg)
 
 
 위의 그림처럼 여러개의 구리선으로 이루어져 있는 것을 볼수 있다.
 
 **케이블**은 구리선을 실드 처리하지 않고 덮은 UTP 케이블과 실드 처리하고 덮은 STP로 나눠진다. 여기서 우리가 많이 볼 수 있는 케이블은 **UTP 케이블**로 흔히 LAN 케이블이라 한다.
 
-![LAN 케이블 과 RJ-45 케넥터](TCP IP 4계층 모델.assets/LAN 케이블 과 RJ-45 케넥터.jpg)
 
+![LAN 케이블 과 RJ-45 케넥터](https://user-images.githubusercontent.com/59475851/210757762-ae89f3ca-ee96-4e52-809d-ea58079ed378.jpg)
 
 
 참고로 이 LAN 케이블을 꽂을 수있는 케넉터를 **RJ-45 케넥터** 라고한다.
@@ -331,8 +328,8 @@ RARP(Rerverse Internet Control Message Protocol): 역주소변환(물리 주소(
 
 
 
-![광섬유 케이블](TCP IP 4계층 모델.assets/광섬유 케이블.jpg)
 
+![광섬유 케이블](https://user-images.githubusercontent.com/59475851/210757791-7e9f7137-10af-4cc1-a681-f614ff0904e3.jpg)
 
 
 참고로 빛의 굴절률이 높은 부분을 **코어(core)**라고 하며 낮은 부분을 **클래딩(cladding)**이라고 합니다.
@@ -354,11 +351,7 @@ RARP(Rerverse Internet Control Message Protocol): 역주소변환(물리 주소(
 ex)무전기
 
 
-
-
-
-![반이중화 통신 방식](TCP IP 4계층 모델.assets/반이중화 통신 방식.jpg)
-
+![반이중화 통신 방식](https://user-images.githubusercontent.com/59475851/210757851-7352449a-0d48-4e4b-ba1a-1cbdd9b878e2.jpg)
 
 
 일반적으로 장치가 신호를 수신하기 시작하면 응답하기 전에 전송이 완료 될때 까지 기다려야 한다.
@@ -410,18 +403,14 @@ ESS(Extended Service Set)는 하나 이상의 연결된 BSS 그룹입니다. 장
 
 아래 그림은 BSS, ESS를 설명한 그림이다.
 
-![BSS 와 ESS](TCP IP 4계층 모델.assets/BSS 와 ESS.jpg)
-
+![BSS 와 ESS](https://user-images.githubusercontent.com/59475851/210757869-0f18d770-81fa-4ff4-859d-27b26455c037.jpg)
 
 
 #### 이더넷 프레임
 
 참고로 **데이터 링크 계층**은 이더넷 프레임을 통해 전달 받은 데이터의 에러를 검출하고 캡슐화 하여 다음과 같은 구조를 가진다.
 
-
-
-<img src="TCP IP 4계층 모델.assets/이더넷 프레임.jpg" alt="이더넷 프레임" style="zoom:150%;" />
-
+![이더넷 프레임](https://user-images.githubusercontent.com/59475851/210757898-9bb9cd08-38eb-4e50-8d92-044ec4d32b24.jpg)
 
 
 
@@ -451,9 +440,7 @@ ESS(Extended Service Set)는 하나 이상의 연결된 BSS 그룹입니다. 장
 필자가 컴퓨터를 통해 다른 컴퓨터로 데이터를 요청한다면 어떠한 일이 일어날까?? ex) HTTP를 통해 웹 서버에 있는 데이터를 요청한다면?? 다음과 같은 일이 일어난다.
 
 
-
-![계층 간 데이터 송수신 과정](TCP IP 4계층 모델.assets/계층 간 데이터 송수신 과정.jpg)
-
+![계층 간 데이터 송수신 과정](https://user-images.githubusercontent.com/59475851/210757917-593a521b-baf2-4bb8-8f1d-c23f1dac9a60.jpg)
 
 
 **애플리케이션 계층에서 전송 계층**으로 필자가 보내는 요청(request) 값들이 **캡슐화** 과정을 거쳐 전달되고, 다시 링크 계층을 통해 해당 서버와 통신을 하고, 해당 서버의 링크 계층으로부터 애플리케이션까지 **비캡슐화** 과정을 거쳐 데이터가 전송된다.
@@ -465,11 +452,7 @@ ESS(Extended Service Set)는 하나 이상의 연결된 BSS 그룹입니다. 장
 캡슐화 과정은 상위 계층의 헤더 와 데이터를 하위 계층의 데이터 부분에 포함 시키고 해당 계층의 **헤더를 삽입** 하는 과정을 말한다.
 
 
-
-
-
-![캡슐화 과정](TCP IP 4계층 모델.assets/캡슐화 과정.jpg)
-
+![캡슐화 과정](https://user-images.githubusercontent.com/59475851/210757937-c9a667f8-031c-465a-b04e-8243d6d8c780.jpg)
 
 
 애플리케이션 계층의 데이터가 전송 계층으로 전달되면서 ‘**세그먼트**’ 또는 ‘**데이터그램**’화되며 TCP(L4) 헤더가 붙여지게 됩니다. 그리고 이후 인터넷 계층으로 가면서 IP(L3) 헤더가 붙여지게 되며 ‘**패킷**’화가 되고, 이후 링크 계층으로 전달되면서 프레임 헤더와 프레임 트레일러가 붙어 ‘**프레임**’화가 됩니다.
@@ -485,11 +468,7 @@ ESS(Extended Service Set)는 하나 이상의 연결된 BSS 그룹입니다. 장
 비캡슐화 과정은 하위 계층에서 상위 계층으로 가며 각 계층의 **헤더 부분을 제거**하는 과정을 말한다.
 
 
-
-
-
-![비캡술화 과정](TCP IP 4계층 모델.assets/비캡술화 과정.jpg)
-
+![비캡술화 과정](https://user-images.githubusercontent.com/59475851/210757955-91ea94f4-75e4-4b04-a45b-5fd1a55408a6.jpg)
 
 
 이렇게 캡슐화된 데이터를 받게 되면 링크 계층에서부터 타고 올라오면서 프레임화된 데이터는 다시 패킷화를 거쳐 **세그먼트, 데이터그램**화를 거쳐 메시지화가 되는 **비캡슐화** 과정이 일어난다. 그 이후 최종적으로 사용자에게 애플리케이션의 PDU인 **메시지**로 전달된다.
@@ -518,11 +497,7 @@ ex) 애플리케이션 계층은 ‘메시지’를 기반으로 데이터를 �
 
 참고로 다음 사이트를 통해 쉽게 curl 명령어로 다른 사이트에 요청할 수 있습니다.
 
-
-
-
-
-![테스트사이트](TCP IP 4계층 모델.assets/테스트사이트-16729139022281.jpg)
+![테스트사이트](https://user-images.githubusercontent.com/59475851/210757982-e731e95f-4ee5-4595-82d6-d7b43dae9566.jpg)
 
 
 
