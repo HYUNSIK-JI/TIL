@@ -1,8 +1,7 @@
 # IP 주소
 
 
-
-지난번 게시글에서 **인터넷 계층** 에 IP 주소를 쓴다고 언급했다. IP 주소에 대해 조금 더 자세하게 알아 보겠습니다.
+[지난번 게시글](https://github.com/HYUNSIK-JI/TIL/blob/master/CS%EC%A0%80%EC%9E%A5%EC%86%8C/TCP%20IP%204%EA%B3%84%EC%B8%B5%20%EB%AA%A8%EB%8D%B8.md)에서 **인터넷 계층** 에 IP 주소를 쓴다고 언급했다. IP 주소에 대해 조금 더 자세하게 알아 보겠습니다.
 
 
 
@@ -14,12 +13,9 @@
 
 ARP를 통해 가상 주소인 ip 주소를 실제 주소인 MAC 주소로 변환한다. 이와 반대로 **RARP** 를 통해 실제 주소인 MAC 주소를 가상 주소인 ip 주소로 변환하기도 한다.
 
+![ARP와 RARP](https://user-images.githubusercontent.com/59475851/211147422-cadb5e4f-9dda-4e96-afe5-b3e9f2ddfa46.jpg)
 
-
-![ARP와 RARP](C:\Users\user\Desktop\이미지모음\ARP와 RARP.jpg)
-
-![ARP의 주소를 찾는 과정](C:\Users\user\Desktop\이미지모음\ARP의 주소를 찾는 과정.jpg)
-
+![ARP의 주소를 찾는 과정](https://user-images.githubusercontent.com/59475851/211147429-10724092-3051-4817-954c-9a4c73784941.jpg)
 
 
 위의 그림처럼 장치 A가 ARP Request 브로드캐스트를 보내서 IP 주소인 120.70.80.3에 해당하는 MAC 주소를 찾는다.
@@ -48,8 +44,7 @@ IP 주소를 통해 통신하는 과정을 홉아비홉(hop by hop) 통신이라
 
 각각의 라우터에 있는 라우팅 테이블의 ip를 기반으로 패킷을 전달하고 다시 전달해 나간다.
 
-![홉바이홉 통신](C:\Users\user\Desktop\이미지모음\홉바이홉 통신.jpg)
-
+![홉바이홉 통신](https://user-images.githubusercontent.com/59475851/211147435-dae06416-e588-4184-908c-d54fce82abcc.jpg)
 
 
 즉, 통신 장치에 있는 '라우팅 테이블'의 ip를 통해 시작 주소부터 시작하여 다음 ip로 게속해서 이동하는 '라우팅'과정을 거쳐 패킷이 최종 목적지 까지 도달하는 통신을 말한다.
@@ -72,16 +67,14 @@ ip주소를 찾아가는 과정을 말한다.
 
 **게이트웨이(gateway) **는 서로 다른 통신망, 프로토콜을 사용하는 네트워크 간의 통신을 가능하게 하는 관문 역할을 하는 컴퓨터나 소프트웨어를 일컫는 용어이다.
 
-![게이트웨이](C:\Users\user\Desktop\이미지모음\게이트웨이.jpg)
-
+![게이트웨이](https://user-images.githubusercontent.com/59475851/211147436-20ee2f27-9a9c-4e6b-aa58-1888eb94bd92.jpg)
 
 
 사용자는 인터넷에 접속하기 위해 수많은 톨게이트인 **게이트웨이** 를 거쳐야 하며 **게이트웨이** 는 서로 다른 네트워크상의 통신 프로토콜을 변환해주는 역알을 하기도 한다.
 
 게이트웨이를 확인하는 방법은 라우팅 테이블을 통해 볼 수있으며 라우팅 테이블은 윈도우의 명령 프롬프트에서 'netstat -r' 명령어를 실해앟여 확인 할수있다.
 
-![netstat -r](C:\Users\user\Desktop\이미지모음\netstat -r.jpg)
-
+![netstat -r](https://user-images.githubusercontent.com/59475851/211147438-ff46711f-9188-40a7-8651-65235feacfda.jpg)
 
 
 위의 그림처럼 IPv4 경로 테이블, IPv6 경로 테이블이 있는데 이것이 바로 라우팅 테이블 이며, 게이트웨이, 인터페이스 등이 나오는 것을 볼수 있다.
@@ -94,17 +87,9 @@ IP주소는 **IPv4 와 IPv6** 로 나뉜다. **IPv4 ** 32비트를 8비트 단�
 
 **IPv6** 64비트를 16비트 단위로 점을 찍어 표기하며, 2001:db8:ff00:42:8329 같은 방식으로 IP주소를 나타낸다.
 
-
-
-
-
-![IPv4와 IPv6 비교](C:\Users\user\Desktop\이미지모음\IPv4와 IPv6 비교.jpg)
-
-
+![IPv4와 IPv6 비교](https://user-images.githubusercontent.com/59475851/211147442-ecfed656-e97a-4b15-b0fe-adb402cb5fa4.jpg)
 
 추세는 IPv6로 가고 있지만 현재 가장 많이 쓰이는 주소 체계는 IPv4이다.
-
-
 
 ### 클래스 기반 할당 방식
 
@@ -112,9 +97,7 @@ IP 주소 체계는 과거를 거쳐 발전해오고 있으며 처음에는 A, B
 
 앞에 있는 부분을 네트워크 주소, 그 뒤에 있는 부분을 컴퓨터에 부여하는 주소인 호스트 주소로 놓아서 사용한다.
 
-![클래스 기반 할당 방식](C:\Users\user\Desktop\이미지모음\클래스 기반 할당 방식.jpg)
-
-
+![클래스 기반 할당 방식](https://user-images.githubusercontent.com/59475851/211147449-2119fea1-2253-438b-b8d7-1bff02bf4e45.jpg)
 
 클래스 A·B·C는 일대일 통신으로 사용된다.
 
@@ -122,9 +105,7 @@ IP 주소 체계는 과거를 거쳐 발전해오고 있으며 처음에는 A, B
 
 ex) 클래스 A의 경우 0.0.0.0부터 127.255.255.255까지 범위를 갖는다.
 
-![클래스 기반 할당 방식 상세 내역](C:\Users\user\Desktop\이미지모음\클래스 기반 할당 방식 상세 내역.jpg)
-
-
+![클래스 기반 할당 방식 상세 내역](https://user-images.githubusercontent.com/59475851/211147456-d0239cbe-b3e0-41a2-b9bd-ef210a681efb.jpg)
 
 맨 왼쪽에 있는 비트를 '구분 비트'라고 한다. 위의 그림 처럼 클래스 **A의 경우 맨 왼쪽에 있는 비트가 0** 이다.
 
@@ -134,9 +115,7 @@ ex) 클래스 A의 경우 0.0.0.0부터 127.255.255.255까지 범위를 갖는�
 
 또한, 네트워크의 **첫 번째 주소는 네트워크 주소로 사용**  되고 **가장 마지막 주소는 브로드캐스트용 주소** 로 네트워크에 속해 있는 모든 컴퓨터에 데이터를 보낼 때 사용된다.
 
-![네트워크 주소와 브로드캐스트용 주소](C:\Users\user\Desktop\이미지모음\네트워크 주소와 브로드캐스트용 주소.jpg)
-
-
+![네트워크 주소와 브로드캐스트용 주소](https://user-images.githubusercontent.com/59475851/211147458-5b164215-4585-4c90-9b91-499b893d81d3.jpg)
 
 ex) 클래스 A로 12.0.0.0이란 네트워크를 부여받았다고 해보자. 
 
@@ -170,9 +149,7 @@ IPv4 주소 체계만으로는 많은 주소들을 모두 감당하지 못하는
 
 NAT를 가능하게 하는 소프트웨어는 ICS, RRAS, Netfilter 등이 있다.
 
-![NAT](C:\Users\user\Desktop\이미지모음\NAT.jpg)
-
-
+![NAT](https://user-images.githubusercontent.com/59475851/211147466-2c1dd63a-11a6-4802-a336-fd329821a7d6.jpg)
 
 위의 그림 처럼 홍철 팀장, 가영 대리는 192.168.0.xxx를 기반으로 각각의 다른 IP를 가지고 있다. 
 
@@ -206,7 +183,8 @@ IP 주소는 인터넷에서 사용하는 네트워크 주소이기 때문에 �
 
 • mylocation 사이트 링크: https://mylocation.co.kr/
 
-![IP 주소를 이용한 위치 정보](C:\Users\user\Desktop\이미지모음\IP 주소를 이용한 위치 정보.jpg)
+![IP 주소를 이용한 위치 정보](https://user-images.githubusercontent.com/59475851/211147481-f5f0ad8d-eaba-408c-b5e3-43c22e97ad4d.jpg)
+
 
 필자는 천호역 근처에 사는데 이렇게 거의 정확하게 나온 것을 알 수 있다.
 
