@@ -20,9 +20,7 @@ HTTP/1.0은 기본적으로 한 연결당 하나의 요청을 처리하도록 �
 
 ### RTT 증가
 
-![RTT 증가](C:\Users\user\Desktop\이미지모음\RTT 증가.jpg)
-
-
+![RTT 증가](https://user-images.githubusercontent.com/59475851/211182925-9c13b9e3-ddde-4b27-86c1-2e657540a5cb.jpg)
 
 서버로부터 파일을 가져올 때마다 **TCP의 3-웨이 핸드셰이크** 를 계속해서 열어야 하기 때문에 **RTT가 증가하는 단점** 이 있다.
 
@@ -131,11 +129,7 @@ HTTP/1.0에서 발전한 것이 바로 HTTP/1.1이다.
 
 참고로 **HTTP/1.0에서도 keep-alive** 가 있었지만 표준화가 되어 있지 않았고 HTTP/1.1부터 표준화가 되어 기본 옵션으로 설정되었다.
 
-
-
-![HTTP1.0 과 HTTP1.1의 비교](C:\Users\user\Desktop\이미지모음\HTTP1.0 과 HTTP1.1의 비교.jpg)
-
-
+![HTTP1 0 과 HTTP1 1의 비교](https://user-images.githubusercontent.com/59475851/211182929-aa17fcf9-4692-4dc0-930f-060133f8bde2.jpg)
 
 위의 그림처럼 한 번 TCP 3-웨이 핸드셰이크가 발생하면 그다음부터 발생하지 않는 것을 볼 수 있다. 
 
@@ -147,9 +141,7 @@ HTTP/1.0에서 발전한 것이 바로 HTTP/1.1이다.
 
 **HOL Blocking(Head Of Line Blocking)** 은 네트워크에서 같은 큐에 있는 패킷이 그 첫 번째 패킷에 의해 지연될 때 발생하는 성능 저하 현상을 말한다.
 
-![HOL Blocking](C:\Users\user\Desktop\이미지모음\HOL Blocking.jpg)
-
-
+![HOL Blocking](https://user-images.githubusercontent.com/59475851/211182937-b10aa15e-8beb-4478-9d4d-70dd7d1d37fe.jpg)
 
 위의 그림처럼 image.jpg와 styles.css, data.xml을 다운로드받을 때 보통은 순차적으로 잘 받아지지만 
 
@@ -183,11 +175,7 @@ HTTP/2는 SPDY 프로토콜에서 파생된 HTTP/1.x보다 지연 시간을 줄�
 
 시간이 지남에 따라 사용할 수 있게 되는 일련의 데이터 요소를 가리키는 데이터 흐름을 말한다.
 
-
-
-![멀티플렉싱](C:\Users\user\Desktop\이미지모음\멀티플렉싱.jpg)
-
-
+![멀티플렉싱](https://user-images.githubusercontent.com/59475851/211182946-02785649-e3d1-4cc8-89a3-0d1558231cb7.jpg)
 
 위의 그림은 하나의 연결 내 여러 스트림을 캡처한 모습이다. 
 
@@ -197,11 +185,7 @@ HTTP/2는 SPDY 프로토콜에서 파생된 HTTP/1.x보다 지연 시간을 줄�
 
 애플리케이션에서 받아온 메시지를 독립된 프레임으로 조각내어 서로 송수신한 이후 다시 조립하며 데이터를 주고받는다.
 
-
-
-![멀티플렉싱2](C:\Users\user\Desktop\이미지모음\멀티플렉싱2.jpg)
-
-
+![멀티플렉싱2](https://user-images.githubusercontent.com/59475851/211182951-32a9b97a-bed8-469b-9066-8e04db46d14c.jpg)
 
 이를 통해 단일 연결을 사용하여 병렬로 여러 요청을 받을 수 있고 응답을 줄 수 있다. 
 
@@ -213,11 +197,7 @@ HTTP/2는 SPDY 프로토콜에서 파생된 HTTP/1.x보다 지연 시간을 줄�
 
 HTTP/1.x에는 크기가 큰 헤더라는 문제가 있다.
 
-
-
-![헤더 압축](C:\Users\user\Desktop\이미지모음\헤더 압축.jpg)
-
-
+![헤더 압축](https://user-images.githubusercontent.com/59475851/211182954-74adbf72-e12b-4ba3-a82c-dae5d262c3ff.jpg)
 
 이를 HTTP/2에서는 헤더 압축을 써서 해결하는데, 
 
@@ -240,8 +220,7 @@ HTTP/1.1에서는 클라이언트가 서버에 요청을 해야 파일을 다운
 HTTP/2는 클라이언트 요청 없이 서버가 바로 리소스를 푸시할 수 있다.
 
 
-
-![서버푸시](C:\Users\user\Desktop\이미지모음\서버푸시.jpg)
+![서버푸시](https://user-images.githubusercontent.com/59475851/211182959-599adc34-fe67-4076-9069-f7364648e23b.jpg)
 
 html에는 css나 js 파일이 포함되기 마련인데 html을 읽으면서 그 안에 들어 있던 css 파일을 서버에서 푸시하여 클라이언트에 먼저 줄 수 있다.
 
@@ -265,9 +244,7 @@ HTTPS는 **애플리케이션 계층과 전송 계층 사이에 신뢰 계층인
 
 SSL/TLS은 **전송 계층에서 보안** 을 제공하는 프로토콜이다. 클라이언트와 서버가 통신할 때 SSL/TLS를 통해 제3자가 메시지를 도청하거나 변조하지 못하도록 한다.
 
-![SSL TLS를 이용한 인터셉터 방지](C:\Users\user\Desktop\이미지모음\SSL TLS를 이용한 인터셉터 방지.jpg)
-
-
+![SSL TLS를 이용한 인터셉터 방지](https://user-images.githubusercontent.com/59475851/211182965-fac8ee2a-8d3c-41ff-9cc7-8009e1f03e61.jpg)
 
 위의 그림처럼 SSL/TLS를 통해 공격자가 서버인 척하며 사용자 정보를 가로채는 네트워크상의 ‘**인터셉터** ’를 방지할 수 있다.
 
@@ -284,10 +261,7 @@ SSL/TLS는 **보안 세션을 기반으로 데이터를 암호화** 하며 보�
 운영체제가 어떠한 사용자로부터 자신의 자산 이용을 허락하는 일정한 기간을 뜻한다. 즉, 사용자는 일정 시간 동안 응용 프로그램, 자원 등을 사용할 수 있다.
 
 
-
-![TLS의 핸드셰이크](C:\Users\user\Desktop\이미지모음\TLS의 핸드셰이크.jpg)
-
-
+![TLS의 핸드셰이크](https://user-images.githubusercontent.com/59475851/211182971-aba901e2-f843-4da7-b184-81e7fc84b4fe.jpg)
 
 클라이언트와 **서버와 키를 공유하고 이를 기반으로 인증, 인증 확인**  등의 작업이 일어나는 단 한 번의 1-RTT가 생긴 후 
 
@@ -361,17 +335,11 @@ ex)TLS_AES_128_GCM_SHA256에는 **세 가지 규약** 이 들어 있다. **TLS�
 
 디피-헬만 키 교환(Diffie-Hellman key exchange) 암호화 알고리즘은 암호키를 교환하는 하나의 방법이다.
 
-
-
-![식](C:\Users\user\Desktop\이미지모음\식.jpg)
+![식](https://user-images.githubusercontent.com/59475851/211182974-2828269a-71e7-46ab-ac91-b2d684aae7b4.jpg)
 
 위의 식에서 g와 x와 p를 안다면 y는 구하기 쉽지만 g와 y와 p만 안다면 x를 구하기는 어렵다는 원리에 기반한 알고리즘이다.
 
-
-
-
-
-![디피-헬만 키 교환 암호화 알고리즘](C:\Users\user\Desktop\이미지모음\디피-헬만 키 교환 암호화 알고리즘.jpg)
+![디피-헬만 키 교환 암호화 알고리즘](https://user-images.githubusercontent.com/59475851/211182978-0f5ac48b-e754-4a66-b413-bca3b8b46693.jpg)
 
 위의 그림처럼 처음에 공개 값을 공유하고 각자의 비밀 값과 혼합한 후 혼합 값을 공유한다. 
 
@@ -399,11 +367,7 @@ SSL/TLS는 해싱 알고리즘으로 **SHA-256 알고리즘과 SHA-384 알고리
 
 SHA-256 알고리즘은 해싱을 해야 할 메시지에 1을 추가하는 등 전처리를 하고 전처리된 메시지를 기반으로 해시를 반환한다.
 
-
-
-![SHA-256](C:\Users\user\Desktop\이미지모음\SHA-256.jpg)
-
-
+![SHA-256](https://user-images.githubusercontent.com/59475851/211182986-ec436561-815e-4e08-b90d-6db9f3a0fc36.jpg)
 
 앞의 그림처럼 “나는 반드시 이번 면접에 합격하고 강원도 고성에 수영하러 간다!”라는 글자가
 
@@ -469,7 +433,7 @@ SHA-256 알고리즘은 해싱을 해야 할 메시지에 1을 추가하는 등 
 
 html 파일의 가장 윗부분인 메타를 잘 설정해야 합니다.
 
-![애플의 메타](C:\Users\user\Desktop\이미지모음\애플의 메타.jpg)
+![애플의 메타](https://user-images.githubusercontent.com/59475851/211182997-8bb596f8-20dd-4705-9d26-e1f255613689.jpg)
 
 최고의 웹 페이지라고 칭송받는 애플의 사이트는 위의 그림처럼 하고 있는 것을 볼 수 있다.
 
@@ -485,13 +449,11 @@ ex) 내가 서비스를 운용하는데, 서비스에 접속하는 데 10초가 
 
 • 페이지 인사이트 링크: https://developers.google.com/speed/pagespeed/insights/
 
-
-
-![페이지 인사이트](C:\Users\user\Desktop\이미지모음\페이지 인사이트.jpg)
+![페이지 인사이트](https://user-images.githubusercontent.com/59475851/211183003-f6dccb56-6625-43af-b455-25f57420643a.jpg)
 
 위의 그림에서 해당 주소를 넣어 페이지 속도 리포팅을 받아볼 수 있다. 네이버 사이트를 테스팅!!.
 
-![페이지 인사이트 내용](C:\Users\user\Desktop\이미지모음\페이지 인사이트 내용.jpg)
+![페이지 인사이트 내용](https://user-images.githubusercontent.com/59475851/211183007-59ff75ec-7c34-4421-921a-1320464d7361.jpg)
 
 위의 그림처럼 잘 나오는 것을 볼 수 있다.
 
@@ -539,11 +501,7 @@ HTTPS 구축 방법은 크게 세 가지이다.
 
 TCP 위에서 돌아가는 HTTP/2와는 달리 **HTTP/3은 QUIC이라는 계층 위에서 돌아가며, TCP 기반이 아닌 UDP 기반** 으로 돌아간다.
 
-
-
-![UDP기반으로 돌아가는 HTTP3](C:\Users\user\Desktop\이미지모음\UDP기반으로 돌아가는 HTTP3.jpg)
-
-
+![UDP기반으로 돌아가는 HTTP3](https://user-images.githubusercontent.com/59475851/211183014-b7a0d6c9-6054-4eb4-a679-00cf1df7553b.jpg)
 
 또한, HTTP/2 에서 장점이었던 멀티플렉싱을 가지고 있으며 초기 연결 설정 시 지연 시간 감소라는 장점이 있다.
 
@@ -554,8 +512,7 @@ TCP 위에서 돌아가는 HTTP/2와는 달리 **HTTP/3은 QUIC이라는 계층 
 **QUIC은 TCP를 사용하지 않기 때문에 통신을 시작할 때 번거로운 3-웨이 핸드셰이크 과정** 을 거치지 않아도 된다.
 
 
-
-![RTT 감소](C:\Users\user\Desktop\이미지모음\RTT 감소.jpg)
+![RTT 감소](https://user-images.githubusercontent.com/59475851/211183019-b11ae59c-f184-4adc-abc8-07a38fc6ca4c.jpg)
 
 QUIC은 첫 연결 설정에 1-RTT만 소요된다. 클라이언트가 서버에 어떤 신호를 한 번 주고, 서버도 거기에 응답하기만 하면 바로 본 통신을 시작할 수 있다.
 
