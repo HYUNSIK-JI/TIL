@@ -2,8 +2,7 @@
 
 운영체제는 프로세스에 적절한 메모리를 할당하는데 다음 구조를 기반으로 할당한다.
 
-![프로세스의 메모리 구조](C:\Users\user\Desktop\이미지모음\프로세스의 메모리 구조.png)
-
+![프로세스의 메모리 구조](https://user-images.githubusercontent.com/59475851/212257466-a8c62cf0-4c97-4a08-9cbc-c0782284f633.png)
 
 
 위에서 부터 **스택(stack), 힙(heap), 데이터 영역(BSS segment, Data segment), 코드 영역(code segment)** 으로 나눠진다.
@@ -94,7 +93,7 @@ PCB는 프로세스 스케줄링 상태, 프로세스 ID등의 다음과 같은 
 
 하지만 컨텍스트 스위칭을 설명 할때는 싱글코어를 기준으로 설명한다.
 
-![컨텍스트 스위칭](C:\Users\user\Desktop\이미지모음\컨텍스트 스위칭.png)
+![컨텍스트 스위칭](https://user-images.githubusercontent.com/59475851/212257493-0dddefdc-9560-4e46-92af-bd21539bda61.png)
 
 위의 그림처럼 한 개의 프로세스 A가 실행하다 멈추고, 프로세스 A의 PCB를 저장하고 다시 프로세스 B를 로드하여 실행한다.
 
