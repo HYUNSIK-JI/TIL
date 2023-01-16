@@ -6,9 +6,7 @@ CPU 스케줄러는 CPU 스케줄러 알고리즘에 따라 프로세스에서 �
 
 할당한다.
 
-![CPU 스케줄링 알고리즘](C:\Users\user\Desktop\이미지모음\CPU 스케줄링 알고리즘.png)
-
-
+![CPU 스케줄링 알고리즘](https://user-images.githubusercontent.com/59475851/212641555-2daef424-71ae-4642-a4d5-2b6319defeab.png)
 
 프로그램이 실행 될때는 CPU 스케줄링 알고리즘이 어떤 프로그램에서 CPU 소유권을 줄 것인지
 
